@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Savnac.Web", "Savnac.Web\Savnac.Web.csproj", "{10A8C0EC-FCD2-439E-B016-273F8CAE54A6}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Savnac.Database", "Savnac.Database\Savnac.Database.sqlproj", "{143AAFE2-A803-42E6-A5C7-38AF8B084A8C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10A8C0EC-FCD2-439E-B016-273F8CAE54A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10A8C0EC-FCD2-439E-B016-273F8CAE54A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10A8C0EC-FCD2-439E-B016-273F8CAE54A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10A8C0EC-FCD2-439E-B016-273F8CAE54A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{143AAFE2-A803-42E6-A5C7-38AF8B084A8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{143AAFE2-A803-42E6-A5C7-38AF8B084A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{143AAFE2-A803-42E6-A5C7-38AF8B084A8C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{143AAFE2-A803-42E6-A5C7-38AF8B084A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{143AAFE2-A803-42E6-A5C7-38AF8B084A8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{143AAFE2-A803-42E6-A5C7-38AF8B084A8C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
