@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <title>Savnac - @ViewBag.Title</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
         @Styles.Render("~/Content/css")
@@ -16,14 +16,26 @@
                 </div>
                 <div class="float-right">
                     <section id="login">
-                        @Html.Partial("_LoginPartial")
+                       <!-- @if (Request.IsAuthenticated)
+                        {
+                            @Html.Partial("_LoginPartial")
+                        }-->
                     </section>
                     <nav>
                         <ul id="menu">
                             @if (Request.IsAuthenticated)
                             {
-                                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                <li>@Html.ActionLink(User.Identity.Name, "Index", "Home")</li>
                                 <li>@Html.ActionLink("Account Settings", "Manage", "Account")</li>
+                                <li>@using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" })) {
+                                    @Html.AntiForgeryToken()
+                                    <a href="javascript:document.getElementById('logoutForm').submit()">Sign Out</a>
+                                }</li>
+                            }
+                            else
+                            {
+                                <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+                                <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
                             }
                         </ul>
                     </nav>
