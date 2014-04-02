@@ -4,12 +4,13 @@
     ViewBag.Title = "Log in";
 }
 
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
+<hgroup class="title" style="width: 262px; text-align: center; margin: 0 auto;">
+    <!-- <h1>@ViewBag.Title.</h1> -->
+	<h1>Log in to Savnac.</h1>
 </hgroup>
 
-<section id="loginForm">
-<h2>Use a local account to log in.</h2>
+<section id="loginForm" style="border: 0px; float: none; width: 262px; margin: 0 auto;">
+<!-- <h2>Use a local account to log in.</h2> -->
 @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
@@ -40,10 +41,11 @@
 }
 </section>
 
+<!-- 
 <section class="social" id="socialLoginForm">
     <h2>Use another service to log in.</h2>
     @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
-</section>
+</section> -->
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

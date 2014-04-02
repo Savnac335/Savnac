@@ -4,7 +4,7 @@
 }
 
 <hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
+	<h1>@ViewBag.Title.</h1>
 </hgroup>
 
 <p class="message-success">@ViewBag.StatusMessage</p>
@@ -13,11 +13,11 @@
 
 @if (ViewBag.HasLocalPassword)
 {
-    @Html.Partial("_ChangePasswordPartial")
+	@Html.Partial("_ChangePasswordPartial")
 }
 else
 { 
-    @Html.Partial("_SetPasswordPartial")
+	@Html.Partial("_SetPasswordPartial")
 }
 
 <section id="externalLogins">
