@@ -1,25 +1,29 @@
 ﻿@model Savnac.Web.Models.Class
 
 @{
-    Layout = null;
+    ViewBag.Title = "Add a Class";
 }
 
-<!DOCTYPE html>
+<hgroup class="title" style="width: 262px; text-align: center; margin: 0 auto;">
+    <!-- <h1>@ViewBag.Title.</h1> -->
+	<h1>Add a new class.</h1>
+</hgroup>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>AddClassForm</title>
-</head>
-<body>
-    @using (Html.BeginForm())
+<section id="addClassForm" style="border: 0px; float: none; width: 262px; margin: 0 auto;">
+@using (Html.BeginForm())
     {
-        @Html.ValidationSummary()
+    @Html.ValidationSummary()
+    <fieldset>
+        <legend>Add Class Form</legend>
+        
         <p>Class Name:  @Html.TextBoxFor( x => x.ClassName ) </p>
         <p>Teacher Name:  @Html.TextBoxFor( x => x.TeacherName ) </p>
         
         <input type ="submit" value="Submit New Class" />
+    </fieldset>
+}
+</section>
 
-    }
-</body>
-</html>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

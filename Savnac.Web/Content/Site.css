@@ -380,6 +380,12 @@ aside {
     display: inline;
 }
 
+#addClassForm {
+    border-right: solid 2px #c8c8c8;
+    float: left;
+    width: 55%;
+}
+
 /* contact */
 .contact h3 {
     font-size: 1.2em;
