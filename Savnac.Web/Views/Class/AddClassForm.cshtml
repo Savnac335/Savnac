@@ -1,0 +1,25 @@
+﻿@model Savnac.Web.Models.Class
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddClassForm</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
+        <p>Class Name:  @Html.TextBoxFor( x => x.ClassName ) </p>
+        <p>Teacher Name:  @Html.TextBoxFor( x => x.TeacherName ) </p>
+        
+        <input type ="submit" value="Submit New Class" />
+
+    }
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿@model Savnac.Web.Models.Class
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>classAdded</title>
+</head>
+<body>
+    <div>
+        <h2>@Model.ClassName Added</h2>
+
+        @Html.ActionLink("Return to Main Page", "Index", "Home")
+    </div>
+</body>
+</html>
