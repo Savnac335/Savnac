@@ -33,5 +33,25 @@ namespace Savnac.Web.Controllers
 		{
 			return View(model);
 		}
+
+		[Authorize]
+		public ActionResult ComposeMessage()
+		{
+			return View();
+		}
+
+		[HttpPost]
+		public ActionResult ComposeMessage(MessageModel model)
+		{
+			//TODO: Add message to database
+
+			return RedirectToAction("SendMessage");
+		}
+
+		[Authorize]
+		public ActionResult SendMessage()
+		{
+			return View();
+		}
     }
 }

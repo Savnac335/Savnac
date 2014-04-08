@@ -1,0 +1,32 @@
+﻿@model Savnac.Web.Models.MessageModel
+@{
+    ViewBag.Title = "ComposeMessage";
+}
+
+<h2>Compose Message</h2>
+
+<div>
+	@using (Html.BeginForm()) {
+		@Html.AntiForgeryToken()
+		@Html.ValidationSummary()
+
+		<fieldset>
+			<legend>Registration Form</legend>
+			<ol>
+				<li>
+					@Html.LabelFor(m => m.recipient)
+					@Html.TextBoxFor(m => m.recipient)
+				</li>
+				<li>
+					@Html.LabelFor(m => m.subject)
+					@Html.TextBoxFor(m => m.subject)
+				</li>
+				<li>
+					@Html.LabelFor(m => m.message)
+					@Html.TextAreaFor(m => m.message)
+				</li>
+			</ol>
+			<input type="submit" value="Send Message" />
+		</fieldset>
+	}
+</div>

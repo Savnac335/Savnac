@@ -10,7 +10,7 @@ namespace Savnac.Web.Models
 	public class MessageModel
 	{
 		public string sender { get; set; }
-		public string receiver { get; set; }
+		public string recipient { get; set; }
 
 		public string subject { get; set; }
 		public string message { get; set; }
@@ -35,8 +35,8 @@ namespace Savnac.Web.Models
 		{
 			Messages = new List<MessageModel>()
 			{
-				new MessageModel() {sender = "eric.pacelli", receiver = "james.peck", subject = "hi", message = "bye james"},
-				new MessageModel() {sender = "james.peck", receiver = "eric.pacelli", subject = "bye", message = "you suck"}
+				new MessageModel() {sender = "eric.pacelli", recipient = "james.peck", subject = "hi", message = "bye james"},
+				new MessageModel() {sender = "james.peck", recipient = "eric.pacelli", subject = "bye", message = "you suck"}
 			};
 		}
 	}
