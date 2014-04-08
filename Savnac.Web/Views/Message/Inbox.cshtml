@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Inbox";
+}
+
+<h2>Inbox</h2>
+
+<div>
+	<ul>
+		@foreach (var message in Model.Messages)
+		{
+			<li><a href=@Url.Action("ReadMessage", message)>@message.subject</a></li>
+		}
+	</ul>
+</div>

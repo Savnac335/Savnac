@@ -182,6 +182,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ClassController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Controllers\ThreadController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
@@ -189,6 +190,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\MessageModels.cs" />
     <Compile Include="Models\ClassModels.cs" />
     <Compile Include="Models\ForumModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -320,6 +322,8 @@
     <Content Include="Views\Class\classAdded.cshtml" />
     <Content Include="Views\Forum\ViewThreadDetail.cshtml" />
     <Content Include="Views\Forum\NewPost.cshtml" />
+    <Content Include="Views\Message\Inbox.cshtml" />
+    <Content Include="Views\Message\ReadMessage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
