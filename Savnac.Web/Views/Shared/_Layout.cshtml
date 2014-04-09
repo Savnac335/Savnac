@@ -12,7 +12,9 @@
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("Savnac", "Index", "Home")</p>
+                    <p class="site-title">
+                        <a class="siteLogo" href="@Url.Action("Index","Home")"><img src="~/Images/SavnacLogo.png" /></a>
+                    </p>
                 </div>
                 <div class="float-right">
                     <section id="login">
@@ -26,7 +28,8 @@
                             @if (Request.IsAuthenticated)
                             {
                                 <li>@Html.ActionLink(User.Identity.Name, "Index", "Home")</li>
-                                <li>@Html.ActionLink("Account Settings", "Manage", "Account")</li>
+                                <li>@Html.ActionLink("Inbox", "Inbox", "Message" )</li>
+                                <li>@Html.ActionLink("Account", "Manage", "Account")</li>
                                 <li>@using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" })) {
                                     @Html.AntiForgeryToken()
                                     <a href="javascript:document.getElementById('logoutForm').submit()">Sign Out</a>

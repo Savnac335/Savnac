@@ -115,7 +115,7 @@ h5, h6 {
     }
 
 header .content-wrapper {
-    padding-top: 20px; 
+    padding-top: 20px;
 }
 
 footer {
@@ -135,13 +135,19 @@ footer {
     margin: 0;
 }
 
+.siteLogo a, a:hover {
+    background: none;
+}
+
 .site-title a, .site-title a:hover, .site-title a:active {
     background: none;
     color: #c8c8c8;
     outline: none;
     text-decoration: none;
+    vertical-align: middle;
+    line-height: 50px;
+    height: 50px;
 }
-
 
 /* login
 ----------------------------------------------------------*/
@@ -475,7 +481,33 @@ textarea {
         padding: 4px;
         margin-right: 4px;
     }
+/* inbox styles */
+.inboxHeader {
+    font-weight: bold;
+}
 
+.inboxMessage {
+    cursor:pointer;
+}
+.inboxMessage:hover {
+    text-decoration:underline
+}
+
+.inboxFromCol {
+    width: 10%;
+}
+
+.inboxSubjCol {
+    width: 15%;
+}
+
+.inboxMesCol {
+    width: 55%;
+}
+
+.inboxTimeCol {
+    width: 20%;
+}
 /* info and errors */
 .message-info {
     border: 1px solid;
