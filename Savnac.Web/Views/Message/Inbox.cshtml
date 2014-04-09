@@ -2,13 +2,51 @@
     ViewBag.Title = "Inbox";
 }
 
+
 <h2>Inbox</h2>
 
-<div>
-	<ul>
+<div class="inbox">
+    <table style="width:100%">
+        <tr class="inboxHeader">
+            <td class="inboxFromCol">From</td>
+            <td class="inboxSubjCol">Subject</td>
+            <td class="inboxMessCol">Message</td>
+            <td class="inboxTimeCol">Time</td>
+        </tr>
+
 		@foreach (var message in Model.Messages)
 		{
-			<li><a href=@Url.Action("ReadMessage", message)>@message.subject</a></li>
+            
+            @*Shortens Message*@
+            string shortMessage;
+            string shortSubject;
+            if (message.message.Length <= 80)
+            {
+                shortMessage = message.message;
+            }
+            else
+            {
+                shortMessage = message.message.Substring(0, 77);
+                shortMessage += "...";
+            }
+
+            if (message.subject.Length <= 15)
+            {
+                shortSubject = message.subject;
+            }
+            else
+            {
+                shortSubject = message.subject.Substring(0, 12);
+                shortSubject += "...";
+            }
+            
+            
+			<tr class="inboxMessage" onclick="document.location = '@Url.Action("ReadMessage", message)';">
+                <td class="inboxFromCol">@message.sender</td>
+                <td class="inboxSubjCol">@shortSubject</td>
+                <td class="inboxMessCol">@shortMessage</td>
+                <td class="inboxTimeCol">@message.timeSent</td>
+			</tr>
 		}
-	</ul>
+    </table>
 </div>

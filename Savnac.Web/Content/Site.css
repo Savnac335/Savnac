@@ -475,7 +475,33 @@ textarea {
         padding: 4px;
         margin-right: 4px;
     }
+/* inbox styles */
+.inboxHeader {
+    font-weight: bold;
+}
 
+.inboxMessage {
+    cursor:pointer;
+}
+.inboxMessage:hover {
+    text-decoration:underline
+}
+
+.inboxFromCol {
+    width: 10%;
+}
+
+.inboxSubjCol {
+    width: 15%;
+}
+
+.inboxMesCol {
+    width: 55%;
+}
+
+.inboxTimeCol {
+    width: 20%;
+}
 /* info and errors */
 .message-info {
     border: 1px solid;
