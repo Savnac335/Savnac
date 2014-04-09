@@ -17,20 +17,31 @@ namespace Savnac.Web.Controllers
     {
         //
         // GET: /Thread/
-
-        public class ThreadDetialViewModel
+        [AllowAnonymous]
+        public ActionResult ThreadSearch()
         {
-            public Thread Thread { get; set; }
-            public Post NewPost { get; set; }
+            return RedirectToAction("Index", "Home");
+        }
+        
+        
+        [HttpGet]
+        public ViewResult addPostForm()
+        {
+            return View();
         }
 
-        public ActionResult ViewThreadDetail(int id)
+        [HttpPost]
+        public ViewResult addPostForm(Thread threadPosted)
         {
-            var thread = new Thread() { ThreadID = id, ThreadTitle = "Savnac", Posts = new List<Post>() };
-            var newPost = new Post() { PostTitle = "", PostText = "", ThreadID = id };
-
-            return View(new ThreadDetialViewModel() { Thread = thread, NewPost = newPost });
+            if (ModelState.IsValid)
+            {
+                return View("threadPosted", threadPosted);
+            }
+            else
+            {
+                return View();
+            }
         }
-
     }
+
 }
