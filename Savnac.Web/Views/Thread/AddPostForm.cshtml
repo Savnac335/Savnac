@@ -1,0 +1,31 @@
+﻿@model Savnac.Web.Models.Thread
+
+@{
+    ViewBag.Title = "Add Post";
+}
+
+<hgroup class="title" style="width: 262px; text-align: center; margin: 0 auto;">
+    <!-- <h1>@ViewBag.Title.</h1> -->
+	<h1>Add a new thread.</h1>
+</hgroup>
+
+<section id="addPostForm" style="border: 0px; float: none; width: 262px; margin: 0 auto;">
+@using (Html.BeginForm()) 
+    {
+    @Html.ValidationSummary()
+
+    <fieldset>
+    <legend>Add Class Form</legend>
+    
+        <p>Post Title: @Html.TextBoxFor(a=>a.PostTitle) </p>
+        <p>Post Text: @Html.TextAreaFor(a => a.PostText )</p>
+        
+    <input type="submit" value="Submit Thread" />
+    </fieldset>
+}
+</section>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

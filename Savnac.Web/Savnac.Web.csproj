@@ -183,7 +183,6 @@
     <Compile Include="Controllers\ClassController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
-    <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Controllers\ThreadController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -192,7 +191,7 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\MessageModels.cs" />
     <Compile Include="Models\ClassModels.cs" />
-    <Compile Include="Models\ForumModel.cs" />
+    <Compile Include="Models\ThreadModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -320,6 +319,9 @@
     <Content Include="Views\Class\ClassManager.cshtml" />
     <Content Include="Views\Class\AddClassForm.cshtml" />
     <Content Include="Views\Class\classAdded.cshtml" />
+    <Content Include="Views\Thread\ThreadManager.cshtml" />
+    <Content Include="Views\Thread\AddPostForm.cshtml" />
+    <Content Include="Views\Thread\threadPosted.cshtml" />
     <Content Include="Views\Forum\ViewThreadDetail.cshtml" />
     <Content Include="Views\Forum\NewPost.cshtml" />
     <Content Include="Views\Message\Inbox.cshtml" />
@@ -349,7 +351,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>1715</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:52148/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
