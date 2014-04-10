@@ -40,13 +40,24 @@ namespace Savnac.Web.Controllers
 			return View();
 		}
 
-		[HttpPost]
-		public ActionResult ComposeMessage(MessageModel model)
-		{
-			//TODO: Add message to database
+        [HttpPost]
+        public ActionResult ComposeMessage(MessageModel model)
+        {
+            //if (ModelState.IsValid)
+            //{
+            //    System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection("Data Source=..\\Savnac.Database\\MyDatabase#1.sdf;Password=***********;Persist Security Info=True");
+            //    System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+            //    cmd.CommandType = System.Data.CommandType.Text;
+            //    cmd.CommandText = "INSERT INTO messageTable (msg_sEmail, msg_rEmail, msg_subject, msg_content, msg_dateTime, msg_isRead ) VALUES (" + model.sender + ", " + model.recipient + ", " + model.subject + ", " + model.message + ", " + model.timeSent + ", " + model.isRead +")";
+            //    cmd.Connection = sqlConnection1;
 
-			return RedirectToAction("SendMessage");
-		}
+            //    sqlConnection1.Open();
+            //    cmd.ExecuteNonQuery();
+            //    sqlConnection1.Close();
+            //}
+
+            return RedirectToAction("SendMessage");
+        }
 
 		[Authorize]
 		public ActionResult SendMessage()

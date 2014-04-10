@@ -58,4 +58,11 @@
   <ItemGroup>
     <Folder Include="Properties" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="MyDatabase#1.sdf" />
+    <None Include="Savnac.Database.dbmdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="messageTable.sql" />
+  </ItemGroup>
 </Project>
