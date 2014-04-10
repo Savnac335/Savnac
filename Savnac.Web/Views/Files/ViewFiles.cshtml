@@ -1,0 +1,22 @@
+﻿
+
+@{
+    ViewBag.Title = "ViewFiles";
+}
+
+<h2>ViewFiles</h2>
+
+<div class="files">
+    <table style="width:100%">
+        <tr class="fileHeader">
+            <td class="fileNames">File Names</td>
+        </tr>
+
+		@foreach (var file in Model.Files)
+		{
+			<tr class="fileList">
+                <td class="fileNames">@file.filename</td>
+			</tr>
+		}
+    </table>
+</div>

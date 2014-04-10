@@ -23,7 +23,7 @@ namespace Savnac.Web.Controllers
 		[Authorize]
 		public ActionResult Inbox()
 		{
-			MessageList messages = new MessageList();
+            MessageList messages = new MessageList();
 
 			return View(messages);
 		}
