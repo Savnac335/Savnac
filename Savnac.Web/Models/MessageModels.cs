@@ -40,6 +40,7 @@ namespace Savnac.Web.Models
                 new MessageModel() {sender = "james.peck", recipient = "eric.pacelli", subject = "dshfgsddfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffjhf", message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent leo sapien, rutrum a erat ac, vestibulum"},
                 new MessageModel() {sender = "james.peck", recipient = "eric.pacelli", subject = "Lorem Praesent leo sapien", message = "Lorem Praesent leo sapien, rutrum a erat ac, vestibulum"},
                 new MessageModel() {sender = "Druk", recipient = "godsfist10", subject = "Kuzu-zangpola Paul", message = "Charo choe layshom bay wong noi ray wa yoe. Tashi Delek!"},
+                new MessageModel() {sender = "Default", recipient = "Druk", subject = "Hara Hetta", message = "Nani Sore? Sore wa nikude wa arimasen. Watashi wa niku o tabemasu."}
 			};
 		}
 	}
