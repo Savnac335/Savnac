@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Gradebook";
+}
+
+<h2>Gradebook</h2>
+@foreach(var i in Model.Classes)
+{
+    <h4>
+        @i.ClassName: @i.grade
+    </h4>
+    foreach (var j in i.Assignments)
+    {
+        <div>
+            @j.AssignmentName: @j.grade
+        </div>
+    }
+}

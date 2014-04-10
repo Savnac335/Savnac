@@ -28,6 +28,7 @@
                             @if (Request.IsAuthenticated)
                             {
                                 <li>@Html.ActionLink(User.Identity.Name, "Index", "Home")</li>
+                                <li>@Html.ActionLink("Grades", "Gradebook", "Class")</li>
                                 <li>@Html.ActionLink("Inbox", "Inbox", "Message" )</li>
                                 <li>@Html.ActionLink("Account", "Manage", "Account")</li>
                                 <li>@using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" })) {

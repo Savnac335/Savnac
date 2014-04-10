@@ -334,6 +334,7 @@
     <Content Include="Views\Message\SendMessage.cshtml" />
     <Content Include="Views\Upload\UploadDocument.cshtml" />
     <Content Include="Views\Files\ViewFiles.cshtml" />
+    <Content Include="Views\Class\Gradebook.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

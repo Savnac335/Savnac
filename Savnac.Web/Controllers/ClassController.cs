@@ -36,5 +36,11 @@ namespace Savnac.Web.Controllers
             }
         }
 
+        public ActionResult Gradebook()
+        {
+            ClassList classes = new ClassList();
+
+            return View(classes);
+        }
     }
 }
