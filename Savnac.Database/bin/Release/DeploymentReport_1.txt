@@ -1,0 +1,21 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[messageTable]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The type for column msg_isRead in table [dbo].[messageTable] is currently  CHAR (3) NOT NULL but is being changed to 
+         INT NOT NULL. Data loss could occur.
+
+** User actions
+     Rename
+       [dbo].[messageTable] (Table)
+     Table rebuild
+       [dbo].[messageTable] (Table)
+
+** Supporting actions
+
+The type for column msg_isRead in table [dbo].[messageTable] is currently  CHAR (3) NOT NULL but is being changed to  INT NOT NULL. Data loss could occur.
+

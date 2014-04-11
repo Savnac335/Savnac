@@ -7,3 +7,8 @@ C:\Users\Kennedy Tran\Desktop\Savnac\Savnac.Database\obj\Release\postdeploy.sql
 C:\Users\Kennedy Tran\Desktop\Savnac\Savnac.Database\obj\Release\predeploy.sql
 C:\Users\Kennedy Tran\Desktop\Savnac\Savnac.Database\obj\Release\Savnac.Database.dll
 C:\Users\Kennedy Tran\Desktop\Savnac\Savnac.Database\obj\Release\Savnac.Database.pdb
+C:\Users\Eric\Desktop\Savnac\Savnac.Database\bin\Release\Savnac.Database.dacpac
+C:\Users\Eric\Desktop\Savnac\Savnac.Database\bin\Release\Savnac.Database.dll
+C:\Users\Eric\Desktop\Savnac\Savnac.Database\bin\Release\Savnac.Database.pdb
+C:\Users\Eric\Desktop\Savnac\Savnac.Database\obj\Release\Savnac.Database.dll
+C:\Users\Eric\Desktop\Savnac\Savnac.Database\obj\Release\Savnac.Database.pdb
