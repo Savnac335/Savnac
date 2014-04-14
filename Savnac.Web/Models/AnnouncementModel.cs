@@ -17,11 +17,6 @@ namespace Savnac.Web.Models
 		public string title { get; set; }
 		public string body { get; set; }
 
-		public AnnouncementModel()
-		{
-			timePosted = DateTime.Now;
-		}
-
-		//swag
+		public int classId { get; set; }
 	}
 }

@@ -81,6 +81,12 @@ namespace Savnac.Web.Controllers
                 {
                     WebSecurity.CreateUserAndAccount(model.UserName, model.Password);
                     WebSecurity.Login(model.UserName, model.Password);
+
+					/*if (!Roles.RoleExists("Administrator"))
+						Roles.CreateRole("Administrator");
+
+					Roles.AddUserToRole(model.UserName, "Administrator");*/
+
                     return RedirectToAction("Index", "Home");
                 }
                 catch (MembershipCreateUserException e)

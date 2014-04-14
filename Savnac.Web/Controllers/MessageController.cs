@@ -42,6 +42,7 @@ namespace Savnac.Web.Controllers
 					{
 						messages.Add(new MessageModel()
 						{
+							id = (int)reader["msg_id"],
 							sender = reader["msg_sEmail"].ToString(),
 							recipient = reader["msg_rEmail"].ToString(),
 							subject = reader["msg_subject"].ToString(),
@@ -59,6 +60,18 @@ namespace Savnac.Web.Controllers
 		[Authorize]
 		public ActionResult ReadMessage(MessageModel model)
 		{
+			var sql = string.Format("UPDATE messageTable SET msg_isRead='true' WHERE msg_id='{0}'", model.id);
+			var connectionString = "Server=(local);Database=Savnac.Database;Trusted_Connection=True;";
+
+			var command = new SqlCommand(sql, new SqlConnection(connectionString));
+
+			using (var connection = command.Connection)
+			{
+				connection.Open();
+				command.ExecuteNonQuery();
+				connection.Close();
+			}
+
 			return View(model);
 		}
 
@@ -84,16 +97,6 @@ namespace Savnac.Web.Controllers
 					command.ExecuteNonQuery();
 					connection.Close();
 				}
-
-				/*System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection("Data Source=..\\Savnac.Database\\MyDatabase#1.sdf;Password=***********;Persist Security Info=True");
-				System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
-				cmd.CommandType = System.Data.CommandType.Text;
-				cmd.CommandText = "INSERT INTO messageTable (msg_sEmail, msg_rEmail, msg_subject, msg_content, msg_dateTime, msg_isRead ) VALUES (" + model.sender + ", " + model.recipient + ", " + model.subject + ", " + model.message + ", " + model.timeSent + ", " + model.isRead + ")";
-				cmd.Connection = sqlConnection1;
-
-				sqlConnection1.Open();
-				cmd.ExecuteNonQuery();
-				sqlConnection1.Close();*/
 			}
 
             return RedirectToAction("SendMessage");

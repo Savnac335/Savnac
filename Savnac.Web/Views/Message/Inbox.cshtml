@@ -3,9 +3,11 @@
 }
 
 
-<h2>Inbox</h2>
+<h2 class="float-left">Inbox</h2>
 
 <div class="inbox">
+	<div class="button float-right">@Html.ActionLink("Compose Message", "ComposeMessage")</div>
+
     <table style="width:100%">
         <tr class="inboxHeader">
             <td class="inboxFromCol">From</td>
@@ -40,12 +42,11 @@
                 shortSubject += "...";
             }
             
-            
 			<tr class="inboxMessage" onclick="document.location = '@Url.Action("ReadMessage", message)';">
-                <td class="inboxFromCol">@message.sender</td>
-                <td class="inboxSubjCol">@shortSubject</td>
-                <td class="inboxMessCol">@shortMessage</td>
-                <td class="inboxTimeCol">@message.timeSent</td>
+                <td class="inboxFromCol">@if(!message.isRead){<b>@message.sender</b>} else {@message.sender}</td>
+                <td class="inboxSubjCol">@if(!message.isRead){<b>@shortSubject</b>} else {@shortSubject}</td>
+                <td class="inboxMessCol">@if(!message.isRead){<b>@shortMessage</b>} else {@shortMessage}</td>
+                <td class="inboxTimeCol">@if(!message.isRead){<b>@message.timeSent</b>} else {@message.timeSent}</td>
 			</tr>
 		}
     </table>

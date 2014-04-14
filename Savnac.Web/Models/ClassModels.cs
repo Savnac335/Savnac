@@ -25,7 +25,10 @@ namespace Savnac.Web.Models
         [Required(ErrorMessage = "Please enter the teacher's name")]
         public string TeacherName { get; set; }
         public ICollection<Assignment> Assignments { get; set; }
-        public int grade { get { int g = 0; foreach (Assignment i in Assignments) g += i.grade; return g / Assignments.Count; } }
+		public int grade { get { int g = 0; foreach (Assignment i in Assignments) g += i.grade; return g / Assignments.Count; } }
+
+		public int AnnouncementId { get; set; }
+		public AnnouncementModel Announcement { get; set; }
     }
 
     public class ClassList
