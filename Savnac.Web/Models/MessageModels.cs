@@ -21,11 +21,5 @@ namespace Savnac.Web.Models
 		public DateTime timeSent { get; set; }
 
 		public bool isRead { get; set; }
-
-		public MessageModel()
-		{
-			isRead = false;
-			timeSent = DateTime.Now;
-		}
 	}
 }
