@@ -20,6 +20,7 @@ namespace Savnac.Web.Models
     {
         public string AssignmentName { get; set; }
         public string AssignmentDesc { get; set; }
+		public int grade { get; set; }
         public DateTime dateDue { get; set; }
         public ICollection<AssignmentScore> scores;
     }
