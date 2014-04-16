@@ -25,12 +25,14 @@ namespace Savnac.Web.Models
         public ICollection<AssignmentScore> scores;
     }
 
-    [Table("Class")]
-    public class Class
+    [Table("Course")]
+    public class Course
     {
-        [Required(ErrorMessage = "Please enter the class name") ]
-        public string ClassName { get; set; }
+        [Required(ErrorMessage = "Please enter the course name") ]
+        public string CourseName { get; set; }
+        public int CourseId { get; set; }
         [Required(ErrorMessage = "Please enter the teacher's name")]
+        public string TeacherName { get; set; }
         public int TeacherId { get; set; }
         public string Syllabus { get; set; }
         public ICollection<Assignment> Assignments { get; set; }
@@ -40,8 +42,8 @@ namespace Savnac.Web.Models
 		public AnnouncementModel Announcement { get; set; }
     }
 
-    public class ClassList
+    public class CourseList
     {
-        public List<Class> Classes { get; set; }
+        public List<Course> Courses { get; set; }
     }
 }

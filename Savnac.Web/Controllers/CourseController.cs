@@ -7,28 +7,28 @@ using Savnac.Web.Models;
 
 namespace Savnac.Web.Controllers
 {
-    public class ClassController : Controller
+    public class CourseController : Controller
     {
  
         [AllowAnonymous]
-        public ActionResult SearchForClass()
+        public ActionResult SearchForCourse()
         {
             
             return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
-        public ViewResult addClassForm()
+        public ViewResult addCourseForm()
         {
             return View();
         }
 
         [HttpPost]
-        public ViewResult addClassForm(Class classAdded)
+        public ViewResult addCourseForm(Course courseAdded)
         {
             if (ModelState.IsValid)
             {
-                return View("classAdded", classAdded);
+                return View("courseAdded", courseAdded);
             }
             else
             {
@@ -36,9 +36,15 @@ namespace Savnac.Web.Controllers
             }
         }
 
+        [HttpGet]
+        public ViewResult StudentCoursePage()
+        {
+            return View();
+        }
+
         public ActionResult Gradebook()
         {
-            ClassList classes = new ClassList();
+            CourseList classes = new CourseList();
             
             return View(classes);
         }

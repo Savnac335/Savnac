@@ -1,0 +1,51 @@
+﻿@model Savnac.Web.Models.Course
+
+
+@{
+ViewBag.Title = "Course ID: Course Name";
+}
+
+
+
+<hgroup class="title" style="width: 262px; text-align: center; margin: 0 auto;">
+    <!-- <h1>@ViewBag.Title.</h1> -->
+    <h1>Course ID: Course Name</h1>
+</hgroup>
+
+<div id="pageLayout">
+    <div id="centerPage" style="text-align: center">
+        <p>Link to Course @Html.ActionLink("Syllabus", "ViewFiles", "Files")</p>
+        <p>Most Recent Announcement Title (which links to the announcement page)</p>
+    </div>
+
+    <ol id="courseOptions" class="round">
+        <li class="one">
+            <h5>View All Announcements</h5>
+            Assignment view has yet to be added.
+        </li>
+        <li class="two">
+            <h5>View All Assignments</h5>
+            Assignment view has yet to be added.
+        </li>
+        <li class="three">
+            <h5>Check Grades</h5>
+            Go to @Html.ActionLink("Grades", "Gradebook", "Course")
+        </li>
+        <li class="four">
+            <h5>Forum</h5>
+            Go to @Html.ActionLink("Forum", "addPostForm", "Thread")
+        </li>
+
+    </ol>
+
+</div>
+
+<!--<div id="courseOptions" style="float:left">
+    <button id="btnAssignments">Assignments</button>
+    <button id="btnGrades">Grades</button>
+    <button id="btnForum">Forum</button>
+</div>-->
+
+
+
+
