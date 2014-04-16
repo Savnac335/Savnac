@@ -3,10 +3,10 @@
 }
 
 <h2>Gradebook</h2>
-@foreach(var i in Model.Classes)
+@foreach(var i in Model.Courses)
 {
     <h4>
-        @i.ClassName: @i.grade
+        @i.CourseName: @i.grade
     </h4>
     foreach (var j in i.Assignments)
     {

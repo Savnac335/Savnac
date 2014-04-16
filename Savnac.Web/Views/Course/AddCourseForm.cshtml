@@ -1,25 +1,25 @@
-﻿@model Savnac.Web.Models.Class
+﻿@model Savnac.Web.Models.Course
 
 @{
-    ViewBag.Title = "Add a Class";
+    ViewBag.Title = "Add a Course";
 }
 
 <hgroup class="title" style="width: 262px; text-align: center; margin: 0 auto;">
     <!-- <h1>@ViewBag.Title.</h1> -->
-	<h1>Add a new class.</h1>
+	<h1>Add a new course.</h1>
 </hgroup>
 
-<section id="addClassForm" style="border: 0px; float: none; width: 262px; margin: 0 auto;">
+<section id="addCourseForm" style="border: 0px; float: none; width: 262px; margin: 0 auto;">
 @using (Html.BeginForm())
     {
     @Html.ValidationSummary()
     <fieldset>
-        <legend>Add Class Form</legend>
+        <legend>Add Course Form</legend>
         
-        <p>Class Name:  @Html.TextBoxFor( x => x.ClassName ) </p>
+        <p>Course Name:  @Html.TextBoxFor( x => x.CourseName ) </p>
         <p>Teacher Name:  @Html.TextBoxFor( x => x.TeacherName ) </p>
         
-        <input type ="submit" value="Submit New Class" />
+        <input type ="submit" value="Submit New Course" />
     </fieldset>
 }
 </section>

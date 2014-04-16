@@ -10,7 +10,8 @@ ViewBag.Message = "";
                 <h2>@ViewBag.Message</h2>
             </hgroup>
             <p>
-                You have no new course updates!
+            @Html.ActionLink("Student Course Page!", "StudentCoursePage", "Course")<br>
+            @Html.ActionLink("Teacher Course Page!", "StudentCoursePage", "Course")
             </p>
         </div>
     </section>
@@ -24,7 +25,7 @@ ViewBag.Message = "";
 
     <li class="two">
         <h5>Register For Some Courses</h5>
-        @Html.ActionLink("Add a class", "addClassForm", "Class")
+        @Html.ActionLink("Add a course", "addCourseForm", "Course")
     </li>
 
     <li class="three">
