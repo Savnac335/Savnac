@@ -33,13 +33,30 @@ namespace Savnac.Web.Models
         public int CourseId { get; set; }
         [Required(ErrorMessage = "Please enter the teacher's name")]
         public string TeacherName { get; set; }
-        public int TeacherId { get; set; }
         public string Syllabus { get; set; }
         public ICollection<Assignment> Assignments { get; set; }
-		public int grade { get { int g = 0; foreach (Assignment i in Assignments) g += i.grade; return g / Assignments.Count; } }
+		public int grade { 
+			get
+			{ 
+				int g = 0;
+
+				if (Assignments.Count == 0) return 0;
+
+				foreach (Assignment i in Assignments)
+					g += i.grade; 
+				
+				return g / Assignments.Count;
+			}
+		}
 
 		public int AnnouncementId { get; set; }
 		public AnnouncementModel Announcement { get; set; }
+
+		public Course()
+		{
+			Assignments = new List<Assignment>();
+			Announcement = new AnnouncementModel();
+		}
     }
 
     public class CourseList

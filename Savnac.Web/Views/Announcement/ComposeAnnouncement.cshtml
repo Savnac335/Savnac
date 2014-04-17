@@ -1,0 +1,28 @@
+﻿@model Savnac.Web.Models.AnnouncementModel
+@{
+    ViewBag.Title = "ComposeAnnouncement";
+}
+
+<h2>Compose Announcement</h2>
+
+<div>
+	@using (Html.BeginForm()) {
+		@Html.AntiForgeryToken()
+		@Html.ValidationSummary()
+
+		<fieldset>
+			<legend>Registration Form</legend>
+			<ol>
+				<li>
+					@Html.LabelFor(m => m.title)
+					@Html.TextBoxFor(m => m.title)
+				</li>
+				<li>
+					@Html.LabelFor(m => m.body)
+					@Html.TextAreaFor(m => m.body)
+				</li>
+			</ol>
+			<input type="submit" value="Send Announcement" />
+		</fieldset>
+	}
+</div>

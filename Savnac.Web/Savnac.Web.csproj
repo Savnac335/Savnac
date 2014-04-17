@@ -345,6 +345,8 @@
     <Content Include="Views\Course\CourseManager.cshtml" />
     <Content Include="Views\Course\Gradebook.cshtml" />
     <Content Include="Views\Course\StudentCoursePage.cshtml" />
+    <Content Include="Views\Course\TeacherCoursePage.cshtml" />
+    <Content Include="Views\Announcement\ComposeAnnouncement.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

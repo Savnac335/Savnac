@@ -406,6 +406,31 @@ aside {
     margin: 5px 0 0 10px;
 }
 
+/* course view */
+.announcement {
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 20px;
+	border: 1px solid;
+	background-color: #E2E2E2;
+}
+
+.announcementTitle {
+	margin-top: 10px;
+	text-align: center;
+}
+
+.announcementBody {
+	padding: 5px;
+	padding-bottom: 10px;
+}
+
+.teacherTime {
+	font-size: .8em;
+	padding-right: 5px;
+	margin-top: -15px;
+}
+
 /* forms */
 fieldset {
     border: none;

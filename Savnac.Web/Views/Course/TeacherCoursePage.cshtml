@@ -1,0 +1,59 @@
+﻿@model Savnac.Web.Models.Course
+
+
+@{
+ViewBag.Title = "TeacherCoursePage";
+}
+
+
+
+<hgroup class="title" style="width: 262px; text-align: center; margin: 0 auto;">
+    <!-- <h1>@ViewBag.Title.</h1> -->
+    <h1>@Model.CourseId: @Model.CourseName</h1>
+</hgroup>
+
+<div id="pageLayout">
+    <div id="centerPage" style="text-align: center">
+        <p>Link to Course @Html.ActionLink("Syllabus", "ViewFiles", "Files")</p>
+    </div>
+
+	@if(@Model.AnnouncementId != -1)
+	{
+	<div class="announcement">
+		<h4 class="announcementTitle">@Model.Announcement.title</h4>
+		<p class="announcementBody">@Model.Announcement.body</p>
+		<p class="teacherTime float-right">@Model.Announcement.user | @Model.Announcement.timePosted.ToString("MM/dd/yyyy hh:MM tt")</p>
+	</div>
+	}
+
+    <ol id="courseOptions" class="float-left round">
+        <li class="one">
+            <h5>Announcements</h5>
+			@Html.ActionLink("Make an Announcement", "ComposeAnnouncement", "Announcement", null, new { courseId = @Model.CourseId })
+        </li>
+		<li class="one">
+            <h5>View All Assignments</h5>
+            Assignment view has yet to be added.
+        </li>
+        <li class="two">
+            <h5>Check Grades</h5>
+            Go to @Html.ActionLink("Grades", "Gradebook", "Course")
+        </li>
+        <li class="three">
+            <h5>Forum</h5>
+            Go to @Html.ActionLink("Forum", "addPostForm", "Thread")
+        </li>
+
+    </ol>
+
+</div>
+
+<!--<div id="courseOptions" style="float:left">
+    <button id="btnAssignments">Assignments</button>
+    <button id="btnGrades">Grades</button>
+    <button id="btnForum">Forum</button>
+</div>-->
+
+
+
+

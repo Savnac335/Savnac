@@ -66,6 +66,7 @@
   <ItemGroup>
     <Build Include="messageTable.sql" />
     <Build Include="announcementTable.sql" />
+    <Build Include="courseTable.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Savnac.Database.refactorlog" />

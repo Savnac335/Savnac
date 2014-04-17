@@ -18,7 +18,8 @@ namespace Savnac.Web.Controllers
 		}
 
 		[Authorize]
-		public ActionResult ComposeAnnouncement()
+		[HttpGet]
+		public ActionResult ComposeAnnouncement(int courseId)
 		{
 			return View();
 		}

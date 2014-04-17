@@ -2,36 +2,40 @@
 
 
 @{
-ViewBag.Title = "Course ID: Course Name";
+ViewBag.Title = "StudentCoursePage";
 }
 
 
 
 <hgroup class="title" style="width: 262px; text-align: center; margin: 0 auto;">
     <!-- <h1>@ViewBag.Title.</h1> -->
-    <h1>Course ID: Course Name</h1>
+    <h1>@Model.CourseId: @Model.CourseName</h1>
 </hgroup>
 
 <div id="pageLayout">
     <div id="centerPage" style="text-align: center">
         <p>Link to Course @Html.ActionLink("Syllabus", "ViewFiles", "Files")</p>
-        <p>Most Recent Announcement Title (which links to the announcement page)</p>
     </div>
 
-    <ol id="courseOptions" class="round">
+	@if(@Model.AnnouncementId != -1)
+	{
+	<div class="announcement">
+		<h4 class="announcementTitle">@Model.Announcement.title</h4>
+		<p class="announcementBody">@Model.Announcement.body</p>
+		<p class="teacherTime float-right">@Model.Announcement.user | @Model.Announcement.timePosted.ToString("MM/dd/yyyy hh:MM tt")</p>
+	</div>
+	}
+
+    <ol id="courseOptions" class="float-left round">
         <li class="one">
-            <h5>View All Announcements</h5>
-            Assignment view has yet to be added.
-        </li>
-        <li class="two">
             <h5>View All Assignments</h5>
             Assignment view has yet to be added.
         </li>
-        <li class="three">
+        <li class="two">
             <h5>Check Grades</h5>
             Go to @Html.ActionLink("Grades", "Gradebook", "Course")
         </li>
-        <li class="four">
+        <li class="three">
             <h5>Forum</h5>
             Go to @Html.ActionLink("Forum", "addPostForm", "Thread")
         </li>
