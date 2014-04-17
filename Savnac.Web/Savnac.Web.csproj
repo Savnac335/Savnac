@@ -187,6 +187,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AnnouncementController.cs" />
+    <Compile Include="Controllers\AttendanceController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\FilesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -199,6 +200,7 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AnnouncementModel.cs" />
+    <Compile Include="Models\CourseAttendanceModel.cs" />
     <Compile Include="Models\CourseModels.cs" />
     <Compile Include="Models\FilesModel.cs" />
     <Compile Include="Models\MessageModels.cs" />
@@ -347,10 +349,11 @@
     <Content Include="Views\Course\StudentCoursePage.cshtml" />
     <Content Include="Views\Course\TeacherCoursePage.cshtml" />
     <Content Include="Views\Announcement\ComposeAnnouncement.cshtml" />
+    <Content Include="Views\Attendance\CourseAttendance.cshtml" />
+    <Content Include="Views\Attendance\SaveAttendance.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

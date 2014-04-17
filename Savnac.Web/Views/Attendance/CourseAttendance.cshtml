@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "CourseAttendance";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CourseAttendance</title>
+</head>
+<body>
+    <div>
+        <div data-ispresent="@ViewBag.isPresent">
+        </div>
+        <!-- <section id="studentName" style="border: 0px; float: none; width: 262px; margin: 0 auto;" /> -->
+        <table>
+            <thead><tr><th>Student Name</th><th>Present?</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td width="75%">@User.Identity.Name</td>
+                    <td width="75%" align="right"><input type="checkbox" checked="@ViewBag.isPresent" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        <input type="submit" value="Save" />
+    }
+</body>
+</html>
