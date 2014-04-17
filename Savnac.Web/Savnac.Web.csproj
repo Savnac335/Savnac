@@ -187,7 +187,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AnnouncementController.cs" />
-    <Compile Include="Controllers\ClassController.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\FilesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
@@ -199,9 +199,9 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AnnouncementModel.cs" />
+    <Compile Include="Models\CourseModels.cs" />
     <Compile Include="Models\FilesModel.cs" />
     <Compile Include="Models\MessageModels.cs" />
-    <Compile Include="Models\ClassModels.cs" />
     <Compile Include="Models\ThreadModel.cs" />
     <Compile Include="Models\UploadModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -328,9 +328,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Class\ClassManager.cshtml" />
-    <Content Include="Views\Class\AddClassForm.cshtml" />
-    <Content Include="Views\Class\classAdded.cshtml" />
     <Content Include="Views\Thread\ThreadManager.cshtml" />
     <Content Include="Views\Thread\AddPostForm.cshtml" />
     <Content Include="Views\Thread\threadPosted.cshtml" />
@@ -342,11 +339,16 @@
     <Content Include="Views\Message\SendMessage.cshtml" />
     <Content Include="Views\Upload\UploadDocument.cshtml" />
     <Content Include="Views\Files\ViewFiles.cshtml" />
-    <Content Include="Views\Class\Gradebook.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Course\AddCourseForm.cshtml" />
+    <Content Include="Views\Course\courseAdded.cshtml" />
+    <Content Include="Views\Course\CourseManager.cshtml" />
+    <Content Include="Views\Course\Gradebook.cshtml" />
+    <Content Include="Views\Course\StudentCoursePage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
