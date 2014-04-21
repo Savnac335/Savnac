@@ -29,7 +29,7 @@ namespace Savnac.Web.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				var sql = string.Format("INSERT INTO announcementTable (username, title, body, timePosted) VALUES ('{0}', '{1}', '{2}', '{3}'", User.Identity.Name, model.title, model.body, DateTime.Now.ToString("yyyy-MM-dd HH:MM:ss"));
+				var sql = string.Format("INSERT INTO Announcement (username, title, body, timePosted) VALUES ('{0}', '{1}', '{2}', '{3}'", User.Identity.Name, model.title, model.body, DateTime.Now.ToString("yyyy-MM-dd HH:MM:ss"));
 				var connectionString = "Server=(local);Database=Savnac.Database;Trusted_Connection=True;";
 
 				var command = new SqlCommand(sql, new SqlConnection(connectionString));

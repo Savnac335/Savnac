@@ -27,7 +27,7 @@ namespace Savnac.Web.Controllers
 		{
             List<MessageModel> messages = new List<MessageModel>();
 
-			var sql = string.Format("SELECT * FROM messageTable WHERE msg_rEmail = '{0}' ORDER BY msg_dateTime DESC", User.Identity.Name);
+			var sql = string.Format("SELECT * FROM Message WHERE msg_rEmail = '{0}' ORDER BY msg_dateTime DESC", User.Identity.Name);
 			var connectionString = "Server=(local);Database=Savnac.Database;Trusted_Connection=True;";
 
 			var command = new SqlCommand(sql, new SqlConnection(connectionString));
@@ -60,7 +60,7 @@ namespace Savnac.Web.Controllers
 		[Authorize]
 		public ActionResult ReadMessage(MessageModel model)
 		{
-			var sql = string.Format("UPDATE messageTable SET msg_isRead='true' WHERE msg_id='{0}'", model.id);
+			var sql = string.Format("UPDATE Message SET msg_isRead='true' WHERE msg_id='{0}'", model.id);
 			var connectionString = "Server=(local);Database=Savnac.Database;Trusted_Connection=True;";
 
 			var command = new SqlCommand(sql, new SqlConnection(connectionString));
@@ -86,7 +86,7 @@ namespace Savnac.Web.Controllers
         {
 			if (ModelState.IsValid)
 			{
-				var sql = string.Format("INSERT INTO messageTable (msg_sEmail, msg_rEmail, msg_subject, msg_content, msg_dateTime, msg_isRead) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", User.Identity.Name, model.recipient, model.subject, model.message, DateTime.Now.ToString("yyyy-MM-dd HH:MM:ss"), false);
+				var sql = string.Format("INSERT INTO Message (msg_sEmail, msg_rEmail, msg_subject, msg_content, msg_dateTime, msg_isRead) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", User.Identity.Name, model.recipient, model.subject, model.message, DateTime.Now.ToString("yyyy-MM-dd HH:MM:ss"), false);
 				var connectionString = "Server=(local);Database=Savnac.Database;Trusted_Connection=True;";
 
 				var command = new SqlCommand(sql, new SqlConnection(connectionString));

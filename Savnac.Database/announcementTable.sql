@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[announcementTable]
+﻿CREATE TABLE [dbo].[Announcement]
 (
 	[announcementId] INT IDENTITY(1,1) PRIMARY KEY, 
     [username] VARCHAR(50) NULL, 

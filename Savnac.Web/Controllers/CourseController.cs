@@ -34,7 +34,7 @@ namespace Savnac.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-				var sql = string.Format("INSERT INTO courseTable (courseName, teacherName, syllabusName, announcementId) VALUES ('{0}', '{1}', '{2}', '{3}')", courseAdded.CourseName, courseAdded.TeacherName, "", -1);
+				var sql = string.Format("INSERT INTO Course (courseName, teacherName, syllabusName, announcementId) VALUES ('{0}', '{1}', '{2}', '{3}')", courseAdded.CourseName, courseAdded.TeacherName, "", -1);
 				var connectionString = "Server=(local);Database=Savnac.Database;Trusted_Connection=True;";
 
 				var command = new SqlCommand(sql, new SqlConnection(connectionString));
@@ -59,7 +59,7 @@ namespace Savnac.Web.Controllers
         {
 			Course course;
 
-			var sql = string.Format("SELECT * FROM courseTable WHERE courseId = '{0}'", id);
+			var sql = string.Format("SELECT * FROM Course WHERE courseId = '{0}'", id);
 			var connectionString = "Server=(local);Database=Savnac.Database;Trusted_Connection=True;";
 
 			var command = new SqlCommand(sql, new SqlConnection(connectionString));
@@ -87,7 +87,7 @@ namespace Savnac.Web.Controllers
 
 			if (course.AnnouncementId != -1)
 			{
-				sql = string.Format("SELECT * FROM announcementTable WHERE announcementId = '{0}'", course.AnnouncementId);
+				sql = string.Format("SELECT * FROM Announcement WHERE announcementId = '{0}'", course.AnnouncementId);
 				command = new SqlCommand(sql, new SqlConnection(connectionString));
 
 				using (var connection = command.Connection)
@@ -127,7 +127,7 @@ namespace Savnac.Web.Controllers
 		{
 			Course course;
 
-			var sql = string.Format("SELECT * FROM courseTable WHERE courseId = '{0}'", id);
+			var sql = string.Format("SELECT * FROM Course WHERE courseId = '{0}'", id);
 			var connectionString = "Server=(local);Database=Savnac.Database;Trusted_Connection=True;";
 
 			var command = new SqlCommand(sql, new SqlConnection(connectionString));
@@ -155,7 +155,7 @@ namespace Savnac.Web.Controllers
 
 			if (course.AnnouncementId != -1)
 			{
-				sql = string.Format("SELECT * FROM announcementTable WHERE announcementId = '{0}'", course.AnnouncementId);
+				sql = string.Format("SELECT * FROM Announcement WHERE announcementId = '{0}'", course.AnnouncementId);
 				command = new SqlCommand(sql, new SqlConnection(connectionString));
 
 				using (var connection = command.Connection)
