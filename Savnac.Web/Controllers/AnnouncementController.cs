@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Savnac.Web.Models;
 using System.Data.SqlClient;
 using System.Data;
+using Savnac.Web.Data;
 
 namespace Savnac.Web.Controllers
 {
@@ -27,20 +28,8 @@ namespace Savnac.Web.Controllers
 		[HttpPost]
 		public ActionResult ComposeAnnouncement(AnnouncementModel model)
 		{
-			if (ModelState.IsValid)
-			{
-				var sql = string.Format("INSERT INTO Announcement (username, title, body, timePosted) VALUES ('{0}', '{1}', '{2}', '{3}'", User.Identity.Name, model.title, model.body, DateTime.Now.ToString("yyyy-MM-dd HH:MM:ss"));
-				var connectionString = "Server=(local);Database=Savnac.Database;Trusted_Connection=True;";
-
-				var command = new SqlCommand(sql, new SqlConnection(connectionString));
-
-				using (var connection = command.Connection)
-				{
-					connection.Open();
-					command.ExecuteNonQuery();
-					connection.Close();
-				}
-			}
+			AnnouncementComposer composer = new AnnouncementComposer();
+			composer.AddAnnouncement(User.Identity.Name, model.title, model.body);
 
 			return RedirectToAction("SendAnnouncement");
 		}
