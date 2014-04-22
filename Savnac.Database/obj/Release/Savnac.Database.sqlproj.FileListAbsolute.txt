@@ -18,3 +18,7 @@ C:\Users\James\Documents\GitHub\Savnac\Savnac.Database\bin\Release\Savnac.Databa
 C:\Users\James\Documents\GitHub\Savnac\Savnac.Database\bin\Release\Savnac.Database.pdb
 C:\Users\James\Documents\GitHub\Savnac\Savnac.Database\obj\Release\Savnac.Database.dll
 C:\Users\James\Documents\GitHub\Savnac\Savnac.Database\obj\Release\Savnac.Database.pdb
+C:\Users\Eric\Desktop\Savnac\Savnac.Database\obj\Release\Model.xml
+C:\Users\Eric\Desktop\Savnac\Savnac.Database\obj\Release\refactor.xml
+C:\Users\Eric\Desktop\Savnac\Savnac.Database\obj\Release\postdeploy.sql
+C:\Users\Eric\Desktop\Savnac\Savnac.Database\obj\Release\predeploy.sql

@@ -43,7 +43,7 @@ namespace Savnac.Web.Controllers
         public ActionResult StudentCoursePage(int id)
         {
             CourseRetriever retriever = new CourseRetriever();
-            Course course = retriever.StudentGetBy(id);
+            Course course = retriever.GetBy(id);
 
 			if(course != null)
 				return View(course);	
@@ -55,7 +55,7 @@ namespace Savnac.Web.Controllers
 		public ActionResult TeacherCoursePage(int id)
 		{
             CourseRetriever retriever = new CourseRetriever();
-            Course course = retriever.TeacherGetBy(id);
+            Course course = retriever.GetBy(id);
 
 			if (course != null)
 				return View(course);
