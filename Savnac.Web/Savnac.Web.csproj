@@ -194,10 +194,12 @@
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\ThreadController.cs" />
     <Compile Include="Controllers\UploadController.cs" />
-    <Compile Include="Data\AnnouncementComposer.cs" />
-    <Compile Include="Data\MessageModelComposer.cs" />
-    <Compile Include="Data\MessageModelRetriever.cs" />
-    <Compile Include="Data\MessageModelUpdater.cs" />
+    <Compile Include="Data\Composers\AnnouncementComposer.cs" />
+    <Compile Include="Data\Retrievers\CourseRetriever.cs" />
+    <Compile Include="Data\Composers\CourseComposer.cs" />
+    <Compile Include="Data\Composers\MessageModelComposer.cs" />
+    <Compile Include="Data\Retrievers\MessageModelRetriever.cs" />
+    <Compile Include="Data\Composers\MessageModelUpdater.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

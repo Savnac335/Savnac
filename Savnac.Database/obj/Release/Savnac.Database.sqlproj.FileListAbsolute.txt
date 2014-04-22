@@ -13,3 +13,8 @@ C:\Users\Olin\Desktop\github workspace\Savnac\Savnac.Database\bin\Release\Savnac
 C:\Users\Olin\Desktop\github workspace\Savnac\Savnac.Database\bin\Release\Savnac.Database.pdb
 C:\Users\Olin\Desktop\github workspace\Savnac\Savnac.Database\obj\Release\Savnac.Database.dll
 C:\Users\Olin\Desktop\github workspace\Savnac\Savnac.Database\obj\Release\Savnac.Database.pdb
+C:\Users\James\Documents\GitHub\Savnac\Savnac.Database\bin\Release\Savnac.Database.dacpac
+C:\Users\James\Documents\GitHub\Savnac\Savnac.Database\bin\Release\Savnac.Database.dll
+C:\Users\James\Documents\GitHub\Savnac\Savnac.Database\bin\Release\Savnac.Database.pdb
+C:\Users\James\Documents\GitHub\Savnac\Savnac.Database\obj\Release\Savnac.Database.dll
+C:\Users\James\Documents\GitHub\Savnac\Savnac.Database\obj\Release\Savnac.Database.pdb
