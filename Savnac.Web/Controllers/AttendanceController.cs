@@ -12,23 +12,24 @@ namespace Savnac.Web.Controllers
         //
         // GET: /Attendance/
 
+        [HttpGet]
         public ActionResult CourseAttendance()
         {
             return View();
         }
 
-        [HttpGet]
-        public ViewResult SaveAttendance()
-        {
-            return View("CourseAttendance");
-        }
+        //[HttpGet]
+        //public ViewResult SaveAttendance()
+        //{
+        //    return View();
+        //}
 
         [HttpPost]
-        public ViewResult SaveAttendance(CourseAttendanceModel model)
+        public ViewResult CourseAttendance(CourseAttendanceModel model)
         {
-            ViewBag.isPresent = false;
+            //ViewBag.isPresent = false;
 
-            return View("AttendanceSaved", model);
+            return View("SaveAttendance", model);
         }
     }
 }
