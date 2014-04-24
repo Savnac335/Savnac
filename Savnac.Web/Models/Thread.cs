@@ -10,8 +10,13 @@ namespace Savnac.Web.Models
 {
     public class Thread
     {
-        public string PostTitle { get; set; }
-        public string PostText { get; set; }
-        public virtual UserProfile UProfile { get; set; }
+        public int ThreadId { get; set; }
+        public string Title { get; set; }
+        public DateTime DateCreated { get; set; }
+
+        public int ForumId { get; set; }
+        public virtual Forum Forum { get; set; }
+
+        public List<Post> Posts { get; set; }
     }
 }

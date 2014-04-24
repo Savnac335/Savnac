@@ -289,7 +289,6 @@ C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Web\bin\ru\System.Spatial.resour
 C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Web\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Web\bin\zh-Hant\System.Spatial.resources.dll
 C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Web\obj\Release\Savnac.Web.csproj.App.config
-C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Web\obj\Release\Savnac.Web.csprojResolveAssemblyReference.cache
 C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Web\obj\Release\Savnac.Web.dll
 C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Web\obj\Release\Savnac.Web.pdb
 C:\Users\Eric\Desktop\Savnac\Savnac.Web\bin\Savnac.Web.dll.config
@@ -782,3 +781,7 @@ C:\Users\Olin\Desktop\github workspace\Savnac\Savnac.Web\obj\Release\Savnac.Web.
 C:\Users\Olin\Desktop\github workspace\Savnac\Savnac.Web\obj\Release\Savnac.Web.csprojResolveAssemblyReference.cache
 C:\Users\Olin\Desktop\github workspace\Savnac\Savnac.Web\obj\Release\Savnac.Web.dll
 C:\Users\Olin\Desktop\github workspace\Savnac\Savnac.Web\obj\Release\Savnac.Web.pdb
+C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Web\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Web\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml

@@ -27,3 +27,7 @@ C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Database\bin\Release\Savnac.Data
 C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Database\bin\Release\Savnac.Database.pdb
 C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Database\obj\Release\Savnac.Database.dll
 C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Database\obj\Release\Savnac.Database.pdb
+C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Database\obj\Release\Model.xml
+C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Database\obj\Release\refactor.xml
+C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Database\obj\Release\postdeploy.sql
+C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Database\obj\Release\predeploy.sql

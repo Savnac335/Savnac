@@ -67,6 +67,12 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Data.Edm, Version=5.6.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -190,10 +196,15 @@
     <Compile Include="Controllers\AttendanceController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\FilesController.cs" />
+    <Compile Include="Controllers\ForumController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\ThreadController.cs" />
     <Compile Include="Controllers\UploadController.cs" />
+    <Compile Include="DAL\ForumRepository.cs" />
+    <Compile Include="DAL\IForumRepository.cs" />
+    <Compile Include="DAL\IThreadRepository.cs" />
+    <Compile Include="DAL\ThreadRepository.cs" />
     <Compile Include="Data\Composers\AnnouncementComposer.cs" />
     <Compile Include="Data\Retrievers\CourseRetriever.cs" />
     <Compile Include="Data\Composers\CourseComposer.cs" />
@@ -209,8 +220,13 @@
     <Compile Include="Models\CourseAttendanceModel.cs" />
     <Compile Include="Models\CourseModels.cs" />
     <Compile Include="Models\FilesModel.cs" />
+    <Compile Include="Models\Forum.cs" />
+    <Compile Include="Models\ForumDbInitializer.cs" />
+    <Compile Include="Models\IdentityModel.cs" />
     <Compile Include="Models\MessageModels.cs" />
-    <Compile Include="Models\ThreadModel.cs" />
+    <Compile Include="Models\Post.cs" />
+    <Compile Include="Models\Savnac_ForumsContext.cs" />
+    <Compile Include="Models\Thread.cs" />
     <Compile Include="Models\UploadModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -336,11 +352,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Thread\ThreadManager.cshtml" />
-    <Content Include="Views\Thread\AddPostForm.cshtml" />
-    <Content Include="Views\Thread\threadPosted.cshtml" />
-    <Content Include="Views\Forum\ViewThreadDetail.cshtml" />
-    <Content Include="Views\Forum\NewPost.cshtml" />
     <Content Include="Views\Message\Inbox.cshtml" />
     <Content Include="Views\Message\ReadMessage.cshtml" />
     <Content Include="Views\Message\ComposeMessage.cshtml" />
@@ -357,6 +368,12 @@
     <Content Include="Views\Announcement\ComposeAnnouncement.cshtml" />
     <Content Include="Views\Attendance\CourseAttendance.cshtml" />
     <Content Include="Views\Attendance\SaveAttendance.cshtml" />
+    <Content Include="Views\Forum\Index.cshtml" />
+    <Content Include="Views\Forum\Create.cshtml" />
+    <Content Include="Views\Forum\Delete.cshtml" />
+    <Content Include="Views\Forum\Details.cshtml" />
+    <Content Include="Views\Forum\Edit.cshtml" />
+    <Content Include="Views\Thread\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

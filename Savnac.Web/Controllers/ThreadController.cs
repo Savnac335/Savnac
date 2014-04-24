@@ -8,39 +8,34 @@ using System.Web.Security;
 using DotNetOpenAuth.AspNet;
 using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
-using Savnac.Web.Filters;
+using Savnac.Web.DAL;
 using Savnac.Web.Models;
 
 namespace Savnac.Web.Controllers
 {
     public class ThreadController : Controller
     {
-        //
-        // GET: /Thread/
-        [AllowAnonymous]
-        public ActionResult ThreadSearch()
+        private IThreadRepository threadRepository;
+
+        public ThreadController()
         {
-            return RedirectToAction("Index", "Home");
-        }
-        
-        
-        [HttpGet]
-        public ViewResult addPostForm()
-        {
-            return View();
+            this.threadRepository = new ThreadRepository(new Savnac_ForumsContext());
         }
 
-        [HttpPost]
-        public ViewResult addPostForm(Thread threadPosted)
+        public ThreadController(IThreadRepository threadRepository)
         {
-            if (ModelState.IsValid)
-            {
-                return View("threadPosted", threadPosted);
-            }
-            else
-            {
-                return View();
-            }
+            this.threadRepository = threadRepository;
+        }
+
+        public ViewResult Index(int forumId)
+        {
+            var threads = threadRepository.GetThreads()
+                .Where(t => t.ForumId == forumId)
+                .OrderByDescending(t => t.DateCreated);
+
+            ViewBag.ForumTitle = threadRepository.GetForum(forumId).Title;
+
+            return View(threads);
         }
     }
 
