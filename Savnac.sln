@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Savnac.Web", "Savnac.Web\Sa
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Savnac.Database", "Savnac.Database\Savnac.Database.sqlproj", "{143AAFE2-A803-42E6-A5C7-38AF8B084A8C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Savnac.Web.Tests", "Savnac.Web.Tests\Savnac.Web.Tests.csproj", "{1338B191-7289-43A9-A1B3-C8ECD6230B33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{143AAFE2-A803-42E6-A5C7-38AF8B084A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{143AAFE2-A803-42E6-A5C7-38AF8B084A8C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{143AAFE2-A803-42E6-A5C7-38AF8B084A8C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{1338B191-7289-43A9-A1B3-C8ECD6230B33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1338B191-7289-43A9-A1B3-C8ECD6230B33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1338B191-7289-43A9-A1B3-C8ECD6230B33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1338B191-7289-43A9-A1B3-C8ECD6230B33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
