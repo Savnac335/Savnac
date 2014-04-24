@@ -31,6 +31,7 @@
                                 <li>@Html.ActionLink("Grades", "Gradebook", "Class")</li>
                                 <li>@Html.ActionLink("Attendance", "CourseAttendance", "Attendance")</li>
                                 <li>@Html.ActionLink("Inbox", "Inbox", "Message" )</li>
+                                <li>@Html.ActionLink("Forum", "Index", "Forum")</li>
                                 <li>@Html.ActionLink("Account", "Manage", "Account")</li>
                                 <li>@using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" })) {
                                     @Html.AntiForgeryToken()
