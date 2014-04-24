@@ -11,7 +11,12 @@ ViewBag.Message = "";
             </hgroup>
             <p>
             @Html.ActionLink("Student Course Page!", "StudentCoursePage", "Course")<br>
-            @Html.ActionLink("Teacher Course Page!", "TeacherCoursePage", "Course")
+            @Html.ActionLink("Teacher Course Page!", "TeacherCoursePage", "Course")<br />
+			@if(User.IsInRole("Administrator"))
+			{
+				@Html.ActionLink("Admin", "Index", "Admin")
+			}
+
             </p>
         </div>
     </section>

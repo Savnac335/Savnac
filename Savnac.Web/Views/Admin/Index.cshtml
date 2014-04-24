@@ -1,9 +1,24 @@
-﻿@{
-    ViewBag.Title = "Index";
-}
+﻿
 
 <h2>Admin</h2>
 
-<p>
-	You're an admin, Harry.
-</p>
+<ol class="round">
+    <li class="one">
+        <h5>Personalize Your Account</h5>
+        Go to the @Html.ActionLink("account settings page", "Manage", "Account") for customization options.
+    </li>
+
+    <li class="two">
+        <h5>Create Some Courses</h5>
+        @Html.ActionLink("Add a course", "addCourseForm", "Course")
+    </li>
+
+    <!-- TODO <li class="three">
+        <h5>Add Teachers</h5>
+        Go to @Html.ActionLink("Forum", "addPostForm", "Thread")
+    </li>
+    <li class="four">
+        <h5>Add Students to Courses</h5>
+        @Html.ActionLink("Upload", "UploadDocument", "Upload")/@Html.ActionLink("View", "ViewFiles", "Files")
+    </li> -->
+</ol>
