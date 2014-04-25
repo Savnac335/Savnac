@@ -74,6 +74,7 @@
     <Build Include="AssignmentScoreTable.sql" />
     <Build Include="AtendeeTable.sql" />
     <Build Include="JoinTable.sql" />
+    <Build Include="AttendanceTable.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Savnac.Database.refactorlog" />
