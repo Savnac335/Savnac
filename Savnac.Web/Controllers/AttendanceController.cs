@@ -15,12 +15,14 @@ namespace Savnac.Web.Controllers
         //
         // GET: /Attendance/
 
+        [Authorize(Roles = "Administrator, Professor")]
         [HttpGet]
         public ActionResult CourseAttendance()
         {
             return View();
         }
 
+        [Authorize(Roles = "Administrator, Professor")]
         [HttpPost]
         public ActionResult CourseAttendance(CourseAttendanceModel model)
         {

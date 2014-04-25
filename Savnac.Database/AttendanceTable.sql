@@ -2,5 +2,5 @@
     [studentName]  NVARCHAR (100) NOT NULL,
     [isPresent]    BIT            NOT NULL,
     [currentDate]  DATE           NOT NULL,
-    PRIMARY KEY CLUSTERED ([studentName] ASC)
+    PRIMARY KEY CLUSTERED ([studentName], [currentDate] ASC)
 );

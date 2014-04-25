@@ -25,7 +25,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td width="75%">@User.Identity.Name</td>
+                    <td width="75%">@Html.EditorFor(m => m.studentName)</td>
                     <td width="75%">@Html.EditorFor(m => m.currentDate)</td>
                     <td width="75%" align="right"><input type="checkbox" checked="@ViewBag.isPresent" /></td>
                 </tr>

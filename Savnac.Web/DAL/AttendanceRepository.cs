@@ -10,7 +10,7 @@ namespace Savnac.Web.DAL
     {
         public void OnSave(string studentName, bool isPresent, DateTime currentDate)
         {
-            var query = string.Format("INSERT INTO Attendance (studentName, isPresent, currentDate) Values ('{0}', '{1}', '{2}')", studentName, isPresent, currentDate);
+            var query = string.Format("IF NOT EXISTS (SELECT * FROM dbo.Attendance WHERE studentName='{0}') INSERT INTO Attendance (studentName, isPresent, currentDate) Values ('{1}', '{2}', '{3}')", studentName, studentName, isPresent, currentDate);
             var connectionString = "Server=(local);Database=Savnac.Database;Trusted_Connection=True;";
 
             var command = new SqlCommand(query, new SqlConnection(connectionString));
