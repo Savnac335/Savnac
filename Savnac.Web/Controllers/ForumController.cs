@@ -12,27 +12,7 @@ namespace Savnac.Web.Controllers
     {
         private IForumRepository forumRepository;
 
-        public ForumController()
-        {
-            this.forumRepository = new ForumRepository(new Savnac_ForumsContext());
-        }
+        //TODO build this!!!
 
-        public ForumController(IForumRepository forumRepository)
-        {
-            this.forumRepository = forumRepository;
-        }
-
-        public ViewResult Index()
-        {
-            var forums = forumRepository.GetForums().OrderBy(f => f.Sequence);
-            return View(forums);
-        }
-
-        [HttpPost]
-        public RedirectToRouteResult Delete(int forumId)
-        {
-            forumRepository.DeleteForum(forumId);
-            return RedirectToAction("Index");
-        }
     }
 }

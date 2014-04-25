@@ -10,11 +10,12 @@ namespace Savnac.Web.DAL
 {
     public interface IForumRepository
     {
-        IEnumerable<Forum> GetForums();
-        Forum GetForumById(int forumId);
-        void CreateForum(Forum forum);
-        void DeleteForum(int forumId);
-        void UpdateForum(Forum forum);
+        ForumModel GetBy(int postId);
+        ICollection<ForumModel> GetForumBy(int courseId);
+       /* TODO Implement these 
+        void CreatePost(string userName, string title, string content);
+        void UpdatePost(ForumModel post);
+       */
     }
 
 }

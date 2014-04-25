@@ -4,67 +4,45 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using Savnac.Web.Models;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Savnac.Web.DAL
 {
-    public class ForumRepository : IForumRepository, IDisposable
+    public class ForumRepository : IForumRepository
     {
-        private Savnac_ForumsContext context;
-
-        public ForumRepository(Savnac_ForumsContext context)
+        public ForumModel GetBy(int id)
         {
-            this.context = context;
-        }
+            ForumModel post = new ForumModel();
 
-        public IEnumerable<Models.Forum> GetForums()
-        {
-            return context.Forums.ToList();
-        }
+            var sql = string.Format("SELECT * FROM Post WHERE PostId = '{0}'", id);
+            var connectionString = "Server=(local);Database=Savnac.Database;Trusted_Connection=True;";
 
-        public Models.Forum GetForumById(int forumId)
-        {
-            return context.Forums.Find(forumId);
-        }
+            var command = new SqlCommand(sql, new SqlConnection(connectionString));
 
-        public void CreateForum(Models.Forum forum)
-        {
-            context.Forums.Add(forum);
-        }
-
-        public void DeleteForum(int forumId)
-        {
-            Forum forum = context.Forums.Find(forumId);
-            context.Forums.Remove(forum);
-        }
-
-        public void UpdateForum(Models.Forum forum)
-        {
-            context.Entry(forum).State = EntityState.Modified;
-        }
-
-        public void Save()
-        {
-            context.SaveChanges();
-        }
-
-        private bool disposed = false;
-
-        public virtual void Dispose(bool disposing)
-        {
-            if (!this.disposed)
+            using (var connection = command.Connection)
             {
-                if (disposing)
+                connection.Open();
+
+                using (var reader = command.ExecuteReader(CommandBehavior.CloseConnection))
                 {
-                    context.Dispose();
+                    post = new ForumModel()
+                    {
+                    };
                 }
-                this.disposed = true;
             }
+
+            return post;
         }
 
-        public void Dispose()
+        public ICollection<ForumModel> GetForumBy(int courseId)
         {
-            Dispose(true);
-            GC.SuppressFinalize(this);
+            ICollection<ForumModel> post = new List<ForumModel>();
+
+            return post;
         }
+ 
     }
+
+    
 }

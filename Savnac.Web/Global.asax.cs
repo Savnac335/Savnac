@@ -24,7 +24,6 @@ namespace Savnac.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            Database.SetInitializer<Savnac_ForumsContext>(new ForumDbInitializer());
             AuthConfig.RegisterAuth();
         }
     }
