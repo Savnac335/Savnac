@@ -16,10 +16,17 @@
         </div>
         <!-- <section id="studentName" style="border: 0px; float: none; width: 262px; margin: 0 auto;" /> -->
         <table>
-            <thead><tr><th>Student Name</th><th>Present?</th></tr></thead>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Current Date</th>
+                    <th>Is Present</th>
+                </tr>
+            </thead>
             <tbody>
                 <tr>
                     <td width="75%">@User.Identity.Name</td>
+                    <td width="75%">@Html.EditorFor(m => m.currentDate)</td>
                     <td width="75%" align="right"><input type="checkbox" checked="@ViewBag.isPresent" /></td>
                 </tr>
             </tbody>

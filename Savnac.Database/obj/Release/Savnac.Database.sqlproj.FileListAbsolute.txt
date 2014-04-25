@@ -36,7 +36,3 @@ C:\Users\paul.kubik\Desktop\Savnac\Savnac.Database\bin\Release\Savnac.Database.d
 C:\Users\paul.kubik\Desktop\Savnac\Savnac.Database\bin\Release\Savnac.Database.pdb
 C:\Users\paul.kubik\Desktop\Savnac\Savnac.Database\obj\Release\Savnac.Database.dll
 C:\Users\paul.kubik\Desktop\Savnac\Savnac.Database\obj\Release\Savnac.Database.pdb
-C:\Users\Kennedy Tran\Desktop\Savnac\Savnac.Database\obj\Release\Model.xml
-C:\Users\Kennedy Tran\Desktop\Savnac\Savnac.Database\obj\Release\refactor.xml
-C:\Users\Kennedy Tran\Desktop\Savnac\Savnac.Database\obj\Release\postdeploy.sql
-C:\Users\Kennedy Tran\Desktop\Savnac\Savnac.Database\obj\Release\predeploy.sql
