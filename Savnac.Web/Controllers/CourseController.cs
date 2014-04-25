@@ -8,7 +8,6 @@ using System.Data.SqlClient;
 using System.Data;
 using WebMatrix.WebData;
 using System.Web.Security;
-using Savnac.Web.Data.Composers;
 using Savnac.Web.DAL;
 
 namespace Savnac.Web.Controllers

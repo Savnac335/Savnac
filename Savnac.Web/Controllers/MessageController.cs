@@ -6,7 +6,6 @@ using System.Web.Mvc;
 using Savnac.Web.Models;
 using System.Data.SqlClient;
 using System.Data;
-using Savnac.Web.Data;
 using Savnac.Web.DAL;
 
 namespace Savnac.Web.Controllers

@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Savnac.Web.Models;
+using System.Data.SqlClient;
+using System.Data;
+using Savnac.Web.DAL;
 
 namespace Savnac.Web.Controllers
 {
@@ -18,18 +21,20 @@ namespace Savnac.Web.Controllers
             return View();
         }
 
-        //[HttpGet]
-        //public ViewResult SaveAttendance()
-        //{
-        //    return View();
-        //}
-
         [HttpPost]
-        public ViewResult CourseAttendance(CourseAttendanceModel model)
+        public ActionResult CourseAttendance(CourseAttendanceModel model)
         {
-            //ViewBag.isPresent = false;
+            if (ModelState.IsValid)
+            {
+                AttendanceRepository attendance = new AttendanceRepository();
+                attendance.OnSave(model.studentName, model.isPresent, model.currentDate);
 
-            return View("SaveAttendance", model);
+                return View("SaveAttendance", model);
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }

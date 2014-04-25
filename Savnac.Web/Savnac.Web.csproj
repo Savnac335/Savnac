@@ -202,8 +202,10 @@
     <Compile Include="Controllers\ThreadController.cs" />
     <Compile Include="Controllers\UploadController.cs" />
     <Compile Include="DAL\AnnouncementRepository.cs" />
+    <Compile Include="DAL\AttendanceRepository.cs" />
     <Compile Include="DAL\CourseRepository.cs" />
     <Compile Include="DAL\IAnnouncementRepository.cs" />
+    <Compile Include="DAL\IAttendanceRepository.cs" />
     <Compile Include="DAL\ICourseRepository.cs" />
     <Compile Include="DAL\MessageRepository.cs" />
     <Compile Include="DAL\ForumRepository.cs" />
