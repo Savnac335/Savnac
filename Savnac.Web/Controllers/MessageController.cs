@@ -7,6 +7,7 @@ using Savnac.Web.Models;
 using System.Data.SqlClient;
 using System.Data;
 using Savnac.Web.Data;
+using Savnac.Web.DAL;
 
 namespace Savnac.Web.Controllers
 {
@@ -26,8 +27,8 @@ namespace Savnac.Web.Controllers
 		[Authorize]
 		public ActionResult Inbox()
 		{
-			MessageModelRetriever retriever = new MessageModelRetriever();
-			ICollection<MessageModel> messages = retriever.GetBy(User.Identity.Name);
+			MessageRepository repository = new MessageRepository();
+			ICollection<MessageModel> messages = repository.GetBy(User.Identity.Name);
 
 			return View(messages);
 		}
@@ -35,8 +36,8 @@ namespace Savnac.Web.Controllers
 		[Authorize]
 		public ActionResult ReadMessage(MessageModel model)
 		{
-			MessageModelUpdater updater = new MessageModelUpdater();
-			updater.MarkRead(model.id);
+			MessageRepository repository = new MessageRepository();
+			repository.MarkRead(model.id);
 
 			return View(model);
 		}
@@ -50,8 +51,8 @@ namespace Savnac.Web.Controllers
         [HttpPost]
         public ActionResult ComposeMessage(MessageModel model)
         {
-			MessageModelComposer composer = new MessageModelComposer();
-			composer.AddMessage(User.Identity.Name, model.recipient, model.subject, model.message);
+			MessageRepository repository = new MessageRepository();
+			repository.AddMessage(User.Identity.Name, model.recipient, model.subject, model.message);
 
             return RedirectToAction("SendMessage");
         }

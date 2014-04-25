@@ -789,3 +789,7 @@ C:\Users\paul.kubik\Desktop\Savnac\Savnac.Web\bin\Microsoft.AspNet.Identity.Core
 C:\Users\paul.kubik\Desktop\Savnac\Savnac.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\paul.kubik\Desktop\Savnac\Savnac.Web\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Users\paul.kubik\Desktop\Savnac\Savnac.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Eric\Desktop\Savnac\Savnac.Web\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Eric\Desktop\Savnac\Savnac.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Eric\Desktop\Savnac\Savnac.Web\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Eric\Desktop\Savnac\Savnac.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml

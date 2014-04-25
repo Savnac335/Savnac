@@ -7,6 +7,7 @@ using Savnac.Web.Models;
 using System.Data.SqlClient;
 using System.Data;
 using Savnac.Web.Data;
+using Savnac.Web.DAL;
 
 namespace Savnac.Web.Controllers
 {
@@ -28,8 +29,8 @@ namespace Savnac.Web.Controllers
 		[HttpPost]
 		public ActionResult ComposeAnnouncement(AnnouncementModel model)
 		{
-			AnnouncementComposer composer = new AnnouncementComposer();
-			composer.AddAnnouncement(User.Identity.Name, model.title, model.body);
+			AnnouncementRepository repository = new AnnouncementRepository();
+			repository.AddAnnouncement(User.Identity.Name, model.title, model.body);
 
 			return RedirectToAction("SendAnnouncement");
 		}

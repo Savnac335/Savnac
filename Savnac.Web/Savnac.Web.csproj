@@ -201,16 +201,16 @@
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\ThreadController.cs" />
     <Compile Include="Controllers\UploadController.cs" />
+    <Compile Include="DAL\AnnouncementRepository.cs" />
+    <Compile Include="DAL\CourseRepository.cs" />
+    <Compile Include="DAL\IAnnouncementRepository.cs" />
+    <Compile Include="DAL\ICourseRepository.cs" />
+    <Compile Include="DAL\MessageRepository.cs" />
     <Compile Include="DAL\ForumRepository.cs" />
     <Compile Include="DAL\IForumRepository.cs" />
+    <Compile Include="DAL\IMessageRepository.cs" />
     <Compile Include="DAL\IThreadRepository.cs" />
     <Compile Include="DAL\ThreadRepository.cs" />
-    <Compile Include="Data\Composers\AnnouncementComposer.cs" />
-    <Compile Include="Data\Retrievers\CourseRetriever.cs" />
-    <Compile Include="Data\Composers\CourseComposer.cs" />
-    <Compile Include="Data\Composers\MessageModelComposer.cs" />
-    <Compile Include="Data\Retrievers\MessageModelRetriever.cs" />
-    <Compile Include="Data\Composers\MessageModelUpdater.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

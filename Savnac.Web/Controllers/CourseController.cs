@@ -9,6 +9,7 @@ using System.Data;
 using WebMatrix.WebData;
 using System.Web.Security;
 using Savnac.Web.Data.Composers;
+using Savnac.Web.DAL;
 
 namespace Savnac.Web.Controllers
 {
@@ -18,7 +19,6 @@ namespace Savnac.Web.Controllers
         [AllowAnonymous]
         public ActionResult SearchForCourse()
         {
-            
             return RedirectToAction("Index", "Home");
         }
 
@@ -33,8 +33,8 @@ namespace Savnac.Web.Controllers
         [HttpPost]
         public ViewResult addCourseForm(Course courseAdded)
         {
-            CourseComposer composer = new CourseComposer();
-            composer.AddCourse(courseAdded.CourseName, courseAdded.CourseId, courseAdded.Syllabus, courseAdded.AnnouncementId);
+			CourseRepository repository = new CourseRepository();
+			repository.AddCourse(courseAdded.CourseName, courseAdded.CourseId, courseAdded.Syllabus, courseAdded.AnnouncementId);
 
             return View("courseAdded", courseAdded);
         }
@@ -50,8 +50,8 @@ namespace Savnac.Web.Controllers
         [HttpPost]
         public ViewResult addAttendeeForm(Atendee atendeeAdded)
         {
-            CourseComposer composer = new CourseComposer();
-            composer.AddPersonToCourse(atendeeAdded.AtendeeName, atendeeAdded.AtendeeId, atendeeAdded.CourseId, atendeeAdded.isTeacher);
+			CourseRepository repository = new CourseRepository();
+			repository.AddPersonToCourse(atendeeAdded.AtendeeName, atendeeAdded.AtendeeId, atendeeAdded.CourseId, atendeeAdded.isTeacher);
 
             return View("atendeeAdded", atendeeAdded);
         }
@@ -59,8 +59,8 @@ namespace Savnac.Web.Controllers
         [HttpGet]
         public ActionResult CourseListing()
         {
-            CourseRetriever retriever = new CourseRetriever();
-            ICollection<Listings> listings = retriever.getClassListings();
+			CourseRepository repository = new CourseRepository();
+			ICollection<Listings> listings = repository.getClassListings();
 
             if (listings != null)
                 return View(listings);
@@ -71,8 +71,8 @@ namespace Savnac.Web.Controllers
         [HttpGet]
         public ActionResult AttendeeListing(int classID)
         {
-            CourseRetriever retriever = new CourseRetriever();
-            ICollection<Listings> listings = retriever.getClassAtendeeListings(classID);
+			CourseRepository repository = new CourseRepository();
+			ICollection<Listings> listings = repository.getClassAtendeeListings(classID);
 
             if (listings != null)
                 return View(listings);
@@ -83,8 +83,8 @@ namespace Savnac.Web.Controllers
 		[HttpGet]
         public ActionResult StudentCoursePage(int id)
         {
-            CourseRetriever retriever = new CourseRetriever();
-            Course course = retriever.GetBy(id);
+			CourseRepository repository = new CourseRepository();
+			Course course = repository.GetBy(id);
 
 			if(course != null)
 				return View(course);	
@@ -95,8 +95,8 @@ namespace Savnac.Web.Controllers
 		[HttpGet]
 		public ActionResult TeacherCoursePage(int id)
 		{
-            CourseRetriever retriever = new CourseRetriever();
-            Course course = retriever.GetBy(id);
+			CourseRepository repository = new CourseRepository();
+			Course course = repository.GetBy(id);
 
 			if (course != null)
 				return View(course);
