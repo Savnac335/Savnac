@@ -17,13 +17,15 @@
         <legend>Add Course Form</legend>
         
         <p>Course Name:  @Html.TextBoxFor( x => x.CourseName ) </p>
-        <p>Teacher Name:  @Html.TextBoxFor( x => x.TeacherName ) </p>
+        <p>Course ID:  @Html.TextBoxFor( x => x.CourseId ) </p>
         
         <input type ="submit" value="Submit New Course" />
     </fieldset>
 }
 </section>
 
+
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+

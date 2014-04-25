@@ -34,9 +34,50 @@ namespace Savnac.Web.Controllers
         public ViewResult addCourseForm(Course courseAdded)
         {
             CourseComposer composer = new CourseComposer();
-            composer.AddCourse(courseAdded.CourseName, courseAdded.TeacherName, courseAdded.Syllabus, courseAdded.AnnouncementId);
+            composer.AddCourse(courseAdded.CourseName, courseAdded.CourseId, courseAdded.Syllabus, courseAdded.AnnouncementId);
 
             return View("courseAdded", courseAdded);
+        }
+
+        [Authorize(Roles = "Administrator")]
+        [HttpGet]
+        public ViewResult addAttendeeForm()
+        {
+            return View();
+        }
+
+        [Authorize(Roles = "Administrator")]
+        [HttpPost]
+        public ViewResult addAttendeeForm(Atendee atendeeAdded)
+        {
+            CourseComposer composer = new CourseComposer();
+            composer.AddPersonToCourse(atendeeAdded.AtendeeName, atendeeAdded.AtendeeId, atendeeAdded.CourseId, atendeeAdded.isTeacher);
+
+            return View("atendeeAdded", atendeeAdded);
+        }
+
+        [HttpGet]
+        public ActionResult CourseListing()
+        {
+            CourseRetriever retriever = new CourseRetriever();
+            ICollection<Listings> listings = retriever.getClassListings();
+
+            if (listings != null)
+                return View(listings);
+            else
+                return RedirectToAction("Index", "Home");
+        }
+
+        [HttpGet]
+        public ActionResult AttendeeListing(int classID)
+        {
+            CourseRetriever retriever = new CourseRetriever();
+            ICollection<Listings> listings = retriever.getClassAtendeeListings(classID);
+
+            if (listings != null)
+                return View(listings);
+            else
+                return RedirectToAction("Index", "Home");
         }
 
 		[HttpGet]

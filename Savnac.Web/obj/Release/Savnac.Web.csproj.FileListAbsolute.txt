@@ -785,3 +785,7 @@ C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Web\bin\Microsoft.AspNet.Identit
 C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Web\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\paul.kubik\Desktop\Savnac\Savnac.Web\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\paul.kubik\Desktop\Savnac\Savnac.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\paul.kubik\Desktop\Savnac\Savnac.Web\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\paul.kubik\Desktop\Savnac\Savnac.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml

@@ -42,4 +42,32 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="teacherName" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="e5b91a6f-a2c0-4371-b320-8ab6f4ce8209" ChangeDateTime="04/24/2014 21:30:39">
+    <Property Name="ElementName" Value="[dbo].[Course].[studentList]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Course]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="studentIDList" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0fdff2b3-5771-476e-8c4d-b3a0ad8a904f" ChangeDateTime="04/24/2014 21:46:26">
+    <Property Name="ElementName" Value="[dbo].[Student].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Student]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="StudentId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="aaa7b2a3-0529-4f67-a862-b5eb082acdc6" ChangeDateTime="04/24/2014 21:55:51">
+    <Property Name="ElementName" Value="[dbo].[JoinTable].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[JoinTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CourseID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7f9f14fa-5eac-4320-a072-f71fd9edeab7" ChangeDateTime="04/24/2014 21:56:30">
+    <Property Name="ElementName" Value="[dbo].[JoinTable].[CourseID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[JoinTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="EnrollmentID" />
+  </Operation>
 </Operations>

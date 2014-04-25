@@ -1,0 +1,31 @@
+﻿@model Savnac.Web.Models.Atendee
+
+@{
+    ViewBag.Title = "Add an Attendee";
+}
+
+<hgroup class="title" style="width: 262px; text-align: center; margin: 0 auto;">
+    <!-- <h1>@ViewBag.Title.</h1> -->
+	<h1>Add a attendee to a course.</h1>
+</hgroup>
+
+<section id="addAttendeeForm" style="border: 0px; float: none; width: 262px; margin: 0 auto;">
+@using (Html.BeginForm())
+    {
+    @Html.ValidationSummary()
+    <fieldset>
+        <legend>Add Attendee Form</legend>
+        
+        <p>Attendee Name:  @Html.TextBoxFor( x => x.AtendeeName ) </p>
+        <p>Attendee ID:  @Html.TextBoxFor( x => x.AtendeeId ) </p>
+        <p>Course ID:  @Html.TextBoxFor( x => x.CourseId ) </p>
+        <p>Is this the teacher?: @Html.CheckBoxFor( x => x.isTeacher) </p>
+
+        <input type ="submit" value="Submit New Attendee" />
+    </fieldset>
+}
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

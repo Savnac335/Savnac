@@ -16,6 +16,22 @@ namespace Savnac.Web.Models
         public HttpPostedFileBase submission { get; set; }
     }
 
+    public class Atendee
+    {
+        public int AtendeeId { get; set; }
+        public string AtendeeName { get; set; }
+        public int CourseId { get; set; }
+        public bool isTeacher { get; set;}
+    }
+
+    public class Listings
+    {
+        public int courseId { get; set; }
+        public string courseName { get; set; }
+        public int atendeeId { get; set; }
+        public string atendeeName { get; set; }
+    }
+
     public class Assignment
     {
         public string AssignmentName { get; set; }
@@ -30,12 +46,12 @@ namespace Savnac.Web.Models
     {
         [Required(ErrorMessage = "Please enter the course name") ]
         public string CourseName { get; set; }
+        [Required(ErrorMessage = "Please enter the course's ID")]
         public int CourseId { get; set; }
-        [Required(ErrorMessage = "Please enter the teacher's name")]
-        public string TeacherName { get; set; }
         public string Syllabus { get; set; }
         public ICollection<Assignment> Assignments { get; set; }
-		public int grade { 
+		public int grade 
+        { 
 			get
 			{ 
 				int g = 0;
@@ -63,4 +79,5 @@ namespace Savnac.Web.Models
     {
         public List<Course> Courses { get; set; }
     }
+        
 }

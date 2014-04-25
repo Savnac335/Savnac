@@ -1,5 +1,4 @@
 ﻿
-
 <h2>Admin</h2>
 
 <ol class="round">
@@ -11,6 +10,16 @@
     <li class="two">
         <h5>Create Some Courses</h5>
         @Html.ActionLink("Add a course", "addCourseForm", "Course")
+    </li>
+
+    <li class="three">
+        <h5>Add People To Courses</h5>
+        @Html.ActionLink("Add person to course", "AddAttendeeForm", "Course")
+    </li>
+
+    <li class="four">
+        <h5>See Course Listings</h5>
+        @Html.ActionLink("Course Listings", "CourseListing", "Course")
     </li>
 
     <!-- TODO <li class="three">

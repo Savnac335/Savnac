@@ -1,0 +1,27 @@
+﻿@model Savnac.Web.Models.Listings
+
+@{
+    ViewBag.Title = "CourseListing";
+}
+
+<h2 class="float-left">CourseListing</h2>
+
+<div class="courseListing">
+	<div class="button float-right">@Html.ActionLink("Admin Home", "Index", "Admin")</div>
+
+    <table style="width:100%">
+        <tr class="courseListing">
+            <td class="Class Name">Name</td>
+            <td class="Class Id">id</td>
+        </tr>
+
+    @foreach (var listing in Model)
+    {
+        <tr class="inboxMessage" onclick="document.location = '@Url.Action("AttendeeListing", listing.courseId, "Course")';">  
+         <td class="Class Name">@<b>@listing.courseName</b></td>
+         <td class="Class Id">@<b>@listing.courseId</b></td>
+        </tr>
+    }
+       
+    </table>
+</div>

@@ -374,6 +374,10 @@
     <Content Include="Views\Forum\Details.cshtml" />
     <Content Include="Views\Forum\Edit.cshtml" />
     <Content Include="Views\Thread\Index.cshtml" />
+    <Content Include="Views\Course\atendeeAdded.cshtml" />
+    <Content Include="Views\Course\AddAttendeeForm.cshtml" />
+    <Content Include="Views\Course\CourseListing.cshtml" />
+    <Content Include="Views\Course\AttendeeListing.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

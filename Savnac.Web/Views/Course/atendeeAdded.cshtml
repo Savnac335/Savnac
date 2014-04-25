@@ -1,0 +1,14 @@
+﻿@model Savnac.Web.Models.Atendee
+
+@{
+    ViewBag.Title = "Attendee added";
+}
+
+<section id="addCourseForm" style="border: 0px; float: none; width: 262px; margin: 0 auto;">
+    <h2>@Model.AtendeeName added to Model.CourseId</h2>
+    @Html.ActionLink("Return to Main Page", "Index", "Home")
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

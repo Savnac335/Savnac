@@ -1,6 +1,7 @@
 ﻿using Savnac.Web.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,66 @@ namespace Savnac.Web.Data.Composers
 {
     public class CourseRetriever
     {
+
+        public ICollection<Listings> getClassListings()
+        {
+            ICollection<Listings> returnListings = new List<Listings>();
+
+            var sql = string.Format("SELECT * FROM Course ORDER BY courseName DESC");
+            var connectionString = "Server=(local);Database=Savnac.Database;Trusted_Connection=True;";
+
+            var command = new SqlCommand(sql, new SqlConnection(connectionString));
+
+            using (var connection = command.Connection)
+            {
+                connection.Open();
+
+                using (var reader = command.ExecuteReader(CommandBehavior.CloseConnection))
+                {
+                    while (reader.Read())
+                    {
+                        returnListings.Add(new Listings()
+                        {
+                            courseId = (int)reader["courseId"],
+                            courseName = reader["courseName"].ToString()
+                        });
+                    }
+                }
+            }
+
+            return returnListings;
+        }
+
+        public ICollection<Listings> getClassAtendeeListings(int classId)
+        {
+            ICollection<Listings> returnListings = new List<Listings>();
+
+            var sql = string.Format("SELECT * FROM Atendee WHERE courseId = '{0}' ORDER BY courseName DESC", classId);
+            var connectionString = "Server=(local);Database=Savnac.Database;Trusted_Connection=True;";
+
+            var command = new SqlCommand(sql, new SqlConnection(connectionString));
+
+            using (var connection = command.Connection)
+            {
+                connection.Open();
+
+                using (var reader = command.ExecuteReader(CommandBehavior.CloseConnection))
+                {
+                    while (reader.Read())
+                    {
+                        returnListings.Add(new Listings()
+                        {
+                            atendeeId = (int)reader["attendeeId"],
+                            atendeeName = reader["attendeeName"].ToString()
+                        });
+                    }
+                }
+            }
+
+            return returnListings;
+        }
+
+
         public Course GetBy(int id)
         {
             Course course;
@@ -22,7 +83,7 @@ namespace Savnac.Web.Data.Composers
             {
                 connection.Open();
 
-                using (var reader = command.ExecuteReader(System.Data.CommandBehavior.CloseConnection))
+                using (var reader = command.ExecuteReader(CommandBehavior.CloseConnection))
                 {
                     reader.Read();
 
@@ -30,8 +91,7 @@ namespace Savnac.Web.Data.Composers
                     {
                         CourseId = id,
                         CourseName = reader["courseName"].ToString(),
-                        TeacherName = reader["teacherName"].ToString(),
-                        Syllabus = reader["syllabusName"].ToString(),
+                        Syllabus = reader["syllabusName"].ToString()
                         //AnnouncementId = (int)reader["announcementId"]
                     };
                 }
@@ -48,7 +108,7 @@ namespace Savnac.Web.Data.Composers
                 {
                     connection.Open();
 
-                    using (var reader = command.ExecuteReader(System.Data.CommandBehavior.CloseConnection))
+                    using (var reader = command.ExecuteReader(CommandBehavior.CloseConnection))
                     {
                         reader.Read();
 
