@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Forum";
+}
+
+<h2 class="float-left">Forum</h2>
+
+<div class="inbox">
+	<div class="button float-right">@Html.ActionLink("Compose Post", "ComposePost")</div>
+
+    <table style="width:100%">
+        <tr class="postHeader">
+            <td class="postFromCol">From</td>
+            <td class="postTitlejCol">Title</td>
+            <td class="postContCol">Content</td>
+            <td class="postTimeCol">Time</td>
+        </tr>
+
+		@foreach (var post in Model)
+		{
+            
+            @*Shortens Post*@
+            string shortPost;
+            string shortTitle;
+            if (post.message.Length <= 80)
+            {
+                shortPost = post.message;
+            }
+            else
+            {
+                shortPost = post.message.Substring(0, 77);
+                shortPost += "...";
+            }
+
+            if (post.subject.Length <= 15)
+            {
+                shortTitle = post.subject;
+            }
+            else
+            {
+                shortTitle = post.subject.Substring(0, 12);
+                shortTitle += "...";
+            }
+            
+			<tr class="forumMessage" onclick="document.location = '@Url.Action("ReadPost", post)';">
+                <td class="inboxFromCol">@if(!post.isRead){<b>@post.sender</b>} else {@post.sender}</td>
+                <td class="inboxSubjCol">@if(!post.isRead){<b>@shortTitle</b>} else {@shortTitle}</td>
+                <td class="inboxMessCol">@if(!post.isRead){<b>@shortPost</b>} else {@shortPost}</td>
+                <td class="inboxTimeCol">@if(!post.isRead){<b>@post.timeSent</b>} else {@post.timeSent}</td>
+			</tr>
+		}
+    </table>
+</div>

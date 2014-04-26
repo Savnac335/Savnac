@@ -199,7 +199,6 @@
     <Compile Include="Controllers\ForumController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
-    <Compile Include="Controllers\ThreadController.cs" />
     <Compile Include="Controllers\UploadController.cs" />
     <Compile Include="DAL\AnnouncementRepository.cs" />
     <Compile Include="DAL\AttendanceRepository.cs" />
@@ -211,8 +210,6 @@
     <Compile Include="DAL\ForumRepository.cs" />
     <Compile Include="DAL\IForumRepository.cs" />
     <Compile Include="DAL\IMessageRepository.cs" />
-    <Compile Include="DAL\IThreadRepository.cs" />
-    <Compile Include="DAL\ThreadRepository.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -222,13 +219,8 @@
     <Compile Include="Models\CourseAttendanceModel.cs" />
     <Compile Include="Models\CourseModels.cs" />
     <Compile Include="Models\FilesModel.cs" />
-    <Compile Include="Models\Forum.cs" />
-    <Compile Include="Models\ForumDbInitializer.cs" />
-    <Compile Include="Models\IdentityModel.cs" />
+    <Compile Include="Models\ForumModel.cs" />
     <Compile Include="Models\MessageModels.cs" />
-    <Compile Include="Models\Post.cs" />
-    <Compile Include="Models\Savnac_ForumsContext.cs" />
-    <Compile Include="Models\Thread.cs" />
     <Compile Include="Models\UploadModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -370,16 +362,14 @@
     <Content Include="Views\Announcement\ComposeAnnouncement.cshtml" />
     <Content Include="Views\Attendance\CourseAttendance.cshtml" />
     <Content Include="Views\Attendance\SaveAttendance.cshtml" />
-    <Content Include="Views\Forum\Index.cshtml" />
-    <Content Include="Views\Forum\Create.cshtml" />
-    <Content Include="Views\Forum\Delete.cshtml" />
-    <Content Include="Views\Forum\Details.cshtml" />
-    <Content Include="Views\Forum\Edit.cshtml" />
-    <Content Include="Views\Thread\Index.cshtml" />
     <Content Include="Views\Course\atendeeAdded.cshtml" />
     <Content Include="Views\Course\AddAttendeeForm.cshtml" />
     <Content Include="Views\Course\CourseListing.cshtml" />
     <Content Include="Views\Course\AttendeeListing.cshtml" />
+    <Content Include="Views\Forum\Forum.cshtml" />
+    <Content Include="Views\Forum\ComposePost.cshtml" />
+    <Content Include="Views\Forum\ReadPost.cshtml" />
+    <Content Include="Views\Forum\PostMessage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

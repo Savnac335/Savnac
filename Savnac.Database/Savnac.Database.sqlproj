@@ -69,7 +69,6 @@
     <Build Include="announcementTable.sql" />
     <Build Include="courseTable.sql" />
     <Build Include="PostTable.sql" />
-    <Build Include="ThreadTable.sql" />
     <Build Include="AssignmentTable.sql" />
     <Build Include="AssignmentScoreTable.sql" />
     <Build Include="AtendeeTable.sql" />

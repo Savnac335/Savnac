@@ -1,0 +1,18 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Attendance]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Table rebuild
+       [dbo].[Attendance] (Table)
+     Create
+       [dbo].[ForumTable] (Table)
+       Foreign Key on [dbo].[ForumTable] (Foreign Key)
+
+** Supporting actions

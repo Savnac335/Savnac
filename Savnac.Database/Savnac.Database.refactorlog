@@ -70,4 +70,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="EnrollmentID" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="56b8b5ef-bc95-4c8c-aaa5-4514eb1ab98f" ChangeDateTime="04/26/2014 02:54:17">
+    <Property Name="ElementName" Value="[dbo].[PostTable].[courseId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PostTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CourseId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1d8ccf33-688f-41f7-917d-f3a876304e98" ChangeDateTime="04/26/2014 03:08:02">
+    <Property Name="ElementName" Value="[dbo].[PostTable].[CourseId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PostTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="courseId" />
+  </Operation>
 </Operations>

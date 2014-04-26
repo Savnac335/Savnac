@@ -1,0 +1,19 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[PostTable]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Drop
+       on [dbo].[PostTable] (Foreign Key)
+     Table rebuild
+       [dbo].[PostTable] (Table)
+
+** Supporting actions
+     Create
+       Foreign Key on [dbo].[PostTable] (Foreign Key)

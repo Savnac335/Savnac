@@ -1,0 +1,5 @@
+C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Database\bin\Debug\Savnac.Database.dacpac
+C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Database\bin\Debug\Savnac.Database.dll
+C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Database\bin\Debug\Savnac.Database.pdb
+C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Database\obj\Debug\Savnac.Database.dll
+C:\Users\Zigmyal\Documents\GitHub\Savnac\Savnac.Database\obj\Debug\Savnac.Database.pdb

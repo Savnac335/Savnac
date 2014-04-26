@@ -1,0 +1,22 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Drop
+       on [dbo].[PostTable] (Foreign Key)
+     Alter
+       [dbo].[PostTable] (Table)
+
+** Supporting actions
+     Create
+       Foreign Key on [dbo].[PostTable] (Foreign Key)
+
+The column courseId on table [dbo].[PostTable] must be changed from NULL to NOT NULL. If the table contains data, the ALTER script may not work. To avoid this issue, you must add values to this column for all rows or mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+

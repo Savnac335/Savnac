@@ -1,0 +1,29 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Announcement] (Table)
+       [dbo].[Assignment] (Table)
+       [dbo].[AssignmentScore] (Table)
+       [dbo].[Atendee] (Table)
+       [dbo].[Attendance] (Table)
+       [dbo].[Course] (Table)
+       [dbo].[ForumTable] (Table)
+       [dbo].[JoinTable] (Table)
+       [dbo].[Message] (Table)
+       Default Constraint on [dbo].[Assignment].[description] (Default Constraint)
+       Default Constraint on [dbo].[AssignmentScore].[score] (Default Constraint)
+       Foreign Key on [dbo].[Assignment] (Foreign Key)
+       Foreign Key on [dbo].[AssignmentScore] (Foreign Key)
+       Foreign Key on [dbo].[Course] (Foreign Key)
+       Foreign Key on [dbo].[ForumTable] (Foreign Key)
+
+** Supporting actions

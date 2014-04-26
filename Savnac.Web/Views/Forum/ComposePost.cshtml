@@ -1,0 +1,34 @@
+﻿@model Savnac.Web.Models.ForumModel
+
+@{
+    ViewBag.Title = "ComposePost";
+}
+
+<h2>ComposePost</h2>
+
+div>
+	@using (Html.BeginForm()) {
+		@Html.AntiForgeryToken()
+		@Html.ValidationSummary()
+
+		<fieldset>
+			<legend>Registration Form</legend>
+			<ol>
+				<li>
+					@Html.LabelFor(m => m.userName)
+					@Html.TextBoxFor(m => m.userName)
+				</li>
+				<li>
+					@Html.LabelFor(m => m.title)
+					@Html.TextBoxFor(m => m.title)
+				</li>
+				<li>
+					@Html.LabelFor(m => m.content)
+					@Html.TextAreaFor(m => m.content)
+				</li>
+			</ol>
+			<input type="submit" value="Submit Post" />
+		</fieldset>
+	}
+</div>
+
